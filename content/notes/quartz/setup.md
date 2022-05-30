@@ -26,9 +26,9 @@ $ git clone https://github.com/YOUR-USERNAME/quartz
 ## Editing
 Great! Now you have everything you need to start editing and growing your digital garden. If you're ready to start writing content already, check out the recommended flow for editing notes in Quartz.
 
-✏️ [Editing Notes in Quartz](notes/editing.md)
+✏️ [Editing Notes in Quartz](notes/quartz/editing.md)
 
-Having problems? Checkout our [FAQ and Troubleshooting guide](notes/troubleshooting.md).
+Having problems? Checkout our [FAQ and Troubleshooting guide](notes/quartz/troubleshooting.md).
 
 ## Updating
 Haven't updated Quartz in a while and want all the cool new optimizations? On Unix/Mac systems you can run the following command for a one-line update! This command will show you a log summary of all commits since you last updated, press `q` to acknowledge this. Then, it will show you each change in turn and press `y` to accept the patch or `n` to reject it. Usually you should press `y` for most of these unless it conflicts with existing changes you've made! 

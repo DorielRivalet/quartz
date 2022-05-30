@@ -1,10 +1,11 @@
 ---
-title: "golden-ratio"
-date: "2022-05-30 02:19"
+title: "repo-setup"
+date: "2022-05-30 03:45"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- 
+- github
 ---
+
 
 2022-05-25 21:55
 

@@ -1,5 +1,5 @@
 ---
-title: "extensions list"
+title: "vsc-extensions"
 date: "2022-05-29 22:53"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:

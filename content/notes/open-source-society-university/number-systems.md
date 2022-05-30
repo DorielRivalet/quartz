@@ -115,7 +115,7 @@ but what is *it*? information
 
 how do we represent an unit of information?
 
-[[notes/bytes]]
+[[notes/open-source-society-university/bytes]]
 
 lets allocate 1 byte:
 

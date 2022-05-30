@@ -1,10 +1,16 @@
 ---
-title: "input-and-output"
-date: "2022-05-30 02:24"
+title: "ruby-introduction"
+date: "2022-05-30 03:45"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - ruby
 ---
+
+
+# Sources
+Own notes
+
+
 
 # Metadata
 2022-05-25 17:12

@@ -1,3 +1,12 @@
+---
+title: "introspection"
+date: "2022-05-30 03:44"
+author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
+tags:
+- definition
+---
+
+
 # Metadata
 2022-05-26 20:26
 

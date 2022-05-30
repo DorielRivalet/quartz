@@ -1,9 +1,9 @@
 ---
-title: "braindump"
+title: "git"
 date: "2022-05-30 02:20"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- 
+- git
 ---
 
 rebase
