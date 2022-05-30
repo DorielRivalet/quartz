@@ -10,5 +10,5 @@ title: Patchouli Computatrum
 ## Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
-- [All Notes](/quartz/notes)
-- [Setup-related Notes](/quartz/tags/setup)
+- [All Notes](./notes)
+- [Setup-related Notes](./tags/setup)
