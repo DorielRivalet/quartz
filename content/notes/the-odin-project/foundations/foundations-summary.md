@@ -1,8 +1,8 @@
 ---
-title: "index"
+title: "foundations summary"
 ---
 
-- [[notes/the-odin-project/internet-infrastructure]]
+- [[notes/the-odin-project/foundations/internet-infrastructure]]
   - Client and server, packets.
   - Web page -> Website -> Web Server
   - IP Address -> Router -> ISP
@@ -225,7 +225,7 @@ title: "index"
       - Pseudo-classes
       - Variables
 - Application Programming Interfaces (API)
-  - [[notes/the-odin-project/document-object-model]] (DOM)
+  - [[notes/the-odin-project/foundations/document-object-model]] (DOM)
     - Nodes and node-lists
     - Capture and bubbling in events.
 - JavaScript (.js)

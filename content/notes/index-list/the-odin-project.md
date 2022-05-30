@@ -6,36 +6,9 @@ tags:
 - list
 ---
 
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
-
-[design](./design)
+- [foundations](notes/the-odin-project/bytes.md)
+- [ruby](notes/open-source-society-university/abstraction.md)
+- [intermediate html and css](notes/open-source-society-university/math-overview.md)
 
 
 
