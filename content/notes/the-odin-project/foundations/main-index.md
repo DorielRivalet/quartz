@@ -1,3 +1,7 @@
+---
+title: "index"
+---
+
 - [[notes/the-odin-project/foundations/Internet Infrastructure]]
   - Client and server, packets.
   - Web page -> Website -> Web Server
