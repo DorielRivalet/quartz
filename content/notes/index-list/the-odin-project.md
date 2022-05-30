@@ -6,9 +6,9 @@ tags:
 - list
 ---
 
-- [foundations](notes/the-odin-project/bytes.md)
-- [ruby](notes/open-source-society-university/abstraction.md)
-- [intermediate html and css](notes/open-source-society-university/math-overview.md)
+- [foundations](notes/the-odin-project/foundations/foundations-summary.md)
+- [ruby]()
+- [intermediate html and css]()
 
 
 
