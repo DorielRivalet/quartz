@@ -10,9 +10,6 @@ tags:
 - [ruby]()
 - [intermediate html and css]()
 
-
-
-# Sources
-Own notes
+![[notes/images/Pasted image 20220530204411.jpg]](https://www.pixiv.net/en/artworks/82220608)
 
 

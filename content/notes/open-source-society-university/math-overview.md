@@ -290,7 +290,14 @@ function multipleExponentiation(num, arrows, num2){
 console.log(multipleExponentiation(2,2,4))
 
 ```
- 
+
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 & 5\\
+addition & multiplication & exponentiation & tetration & pentation
+\end{bmatrix}
+$$
+
 let's answer the second question: what if the number is negative in the square root?
 
 $$\sqrt[2]{-2}$$
