@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>list on</title><link>https://quartz.jzhao.xyz/tags/list/</link><description>Recent content in list on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://quartz.jzhao.xyz/tags/list/index.xml" rel="self" type="application/rss+xml"/><item><title>index</title><link>https://quartz.jzhao.xyz/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/</guid><description>design
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>list on</title><link>https://quartz.jzhao.xyz/tags/list/</link><description>Recent content in list on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://quartz.jzhao.xyz/tags/list/index.xml" rel="self" type="application/rss+xml"/><item><title>amalgation of random stuff</title><link>https://quartz.jzhao.xyz/notes/amalgation-of-random-stuff/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/amalgation-of-random-stuff/</guid><description>organize this raw data and put them into other folders
+levels of explanation
+prototypes, JavaScript philosophy
+pythonic
+docker
+netlify
+.bin are binary files</description></item><item><title>braindump</title><link>https://quartz.jzhao.xyz/notes/braindump-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/braindump-2/</guid><description>encryption-decryption: XOR&amp;rsquo;ed, obfuscation, steganography, deobfuscator
+logic gates
+NAND gates
+u can make anything with just nand
+turing complete examples: programming languages.</description></item><item><title>index</title><link>https://quartz.jzhao.xyz/notes/index-list/the-odin-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/index-list/the-odin-project/</guid><description>design
 design
 design
 design
@@ -7,4 +17,4 @@ design
 design
 design
 design
-design</description></item></channel></rss>
+design</description></item><item><title>open-source-society-university-index</title><link>https://quartz.jzhao.xyz/notes/index-list/open-source-society-university/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/index-list/open-source-society-university/</guid><description>bytes abstraction number systems Sources Own notes</description></item><item><title>vsc-extensions</title><link>https://quartz.jzhao.xyz/notes/vsc-extensions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/vsc-extensions/</guid><description> github copilot emojisense eslint git history github copilot github markdown preview github pull request and issues github repositories gitlens latex workshop live server markdown all in one markdown emoji markdown preview github styling markdown preview mermaid support markdown yaml preamble material icon theme npm npm intellisense remote repositories wakatime</description></item></channel></rss>

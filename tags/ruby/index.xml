@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ruby on</title><link>https://quartz.jzhao.xyz/tags/ruby/</link><description>Recent content in ruby on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://quartz.jzhao.xyz/tags/ruby/index.xml" rel="self" type="application/rss+xml"/><item><title>conditional logic</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-conditional-logic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-conditional-logic/</guid><description>Metadata 2022-05-26 01:17
+conditional logic
+Content The only false values in Ruby are the values nil and false themselves
+If there is only one line of code to be evaluated inside the block, then you can rewrite the code to be more succinct and take up only one line:</description></item><item><title>data-types</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-data-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-data-types/</guid><description>Metadata 2022-05-25 20:30
+Data Types
+Content It’s important to keep in mind that when doing arithmetic with two integers in Ruby, the result will always be an integer.</description></item><item><title>input-and-output</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/input-and-output/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/input-and-output/</guid><description>Metadata 2022-05-26 00:47
+input and ouput
+Content puts appends a new line to the argument passed in, whereas print keeps things all on one line.</description></item><item><title>input-and-output</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/loops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/loops/</guid><description>Metadata 2022-05-26 18:48
+loops
+Content 1 2 3 4 5 6 i = 0 loop do puts &amp;#34;i is #{i}&amp;#34; i += 1 break if i == 10 end 1 2 3 4 5 6 7 i = 0 while true do print(&amp;#34;i is &amp;#34;.</description></item><item><title>input-and-output</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/variables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/variables/</guid><description>Metadata 2022-05-25 23:38
+Variables
+Content |varName| local/private
+do end {}
+tokens do, make block end, finalize block {, make block }, finalize block</description></item><item><title>ruby-arrays</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-arrays/</guid><description>Metadata 2022-05-26 20:38
+arrays
+Content shovel operator &amp;lt;&amp;lt;
+#shift and #unshift first elements pop and push last elements
+1 num_array.</description></item><item><title>ruby-introduction</title><link>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-introduction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://quartz.jzhao.xyz/notes/the-odin-project/ruby-introduction/</guid><description>Sources Own notes
+Metadata 2022-05-25 17:12
+202205251705
+Content Domain Specific Languages (DSL&amp;rsquo;s): Rails, Rspec
+When you start learning programming in Ruby you’ll need three tools: A text editor, a terminal, and a Ruby runtime.</description></item></channel></rss>
