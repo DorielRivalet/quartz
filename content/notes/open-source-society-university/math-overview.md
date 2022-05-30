@@ -368,6 +368,8 @@ where position is our variable (which is a property of an instance of the Sword 
 
 so, imagine x as i, y as j and z as... k!
 
+$$i^2 = j^2 = k^2 = i.j.k = -1$$
+
 4 dimensional numbers would be something called [quaternions](https://youtu.be/3BR8tK-LuB0?t=287) (quadra meaning four, the same way tetra means four, but from a different language origin, find out which one is greek and which one is latin!), and it introduces 2 more types of numbers: j and k. 
 
 (notice how at the [6:20 mark](https://youtu.be/3BR8tK-LuB0?t=380) is related to the concept of [diffuse mode](https://www.theodinproject.com/lessons/foundations-motivation-and-mindset#the-learning-process))
