@@ -8,6 +8,36 @@ tags:
 
 [design](./design)
 
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+[design](./design)
+
+
 
 # Sources
 Own notes
