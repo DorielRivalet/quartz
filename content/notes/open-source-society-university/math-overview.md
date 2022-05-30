@@ -10,7 +10,7 @@ tags:
 # Metadata
 2022-05-27 04:42
 
-Title: self test
+Title: overview of math and programming
 
 Author: [Doriel Rivalet](https://github.com/DorielRivalet)
 

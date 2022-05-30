@@ -8,7 +8,7 @@ tags:
 
 - [bytes](notes/open-source-society-university/bytes.md)
 - [abstraction](notes/open-source-society-university/abstraction.md)
-- [number systems](notes/open-source-society-university/number-systems.md)
+- [math overview](notes/open-source-society-university/math-overview.md)
 
 # Sources
 Own notes
