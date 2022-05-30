@@ -11,10 +11,13 @@ title: Patchouli Computatrum
 ## Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
-- [All Notes](quartz/notes)
-- [Setup-related Notes](quartz/tags/setup)
+- [All Notes](https://dorielrivalet.github.io/quartz/notes/)
+- [Setup-related Notes](https://dorielrivalet.github.io/quartz/tags/setup)
+
+
+[A link to the config page](notes/quartz/config.md)
 
 
 ## [Knowledge](https://www.youtube.com/watch?v=ViDjDy3j-y8) Index
-- [The Odin Project](quartz/notes/index-list/the-odin-project.md)
-- [Open Source Society University](quartz/notes/index-list/open-source-society-university.md)
+- [The Odin Project](https://dorielrivalet.github.io/quartz/notes/index-list/the-odin-project.md)
+- [Open Source Society University](https://dorielrivalet.github.io/quartz/notes/index-list/open-source-society-university.md)
