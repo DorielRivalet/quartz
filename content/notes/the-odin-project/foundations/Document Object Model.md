@@ -1,3 +1,11 @@
+---
+title: "Document Object Model"
+date: "2022-05-30 02:22"
+author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
+tags:
+- #dom
+---
+
 # Metadata
 
 2022-05-21 16:00

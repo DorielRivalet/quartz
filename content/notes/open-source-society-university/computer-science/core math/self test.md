@@ -1,3 +1,12 @@
+---
+title: "self test"
+date: "2022-05-30 02:28"
+author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
+tags:
+- #math
+---
+
+
 # Metadata
 2022-05-27 04:42
 
@@ -54,6 +63,13 @@ $$5 = 1+1+1+1+1$$
 [i could show why 1+1=2 but showing hundreds of pages for it is not needed for the general overview i'm aiming for](https://en.wikipedia.org/wiki/Principia_Mathematica)
 
 our hand is an object and we iterated through the elements of the object which in this case are our fingers. the act of counting is the iteration.
+
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 & 5\\
+thumb & index & middle & ring & pinky
+\end{bmatrix}
+$$
 
 whats the data type we are currently dealing with? integers
 
@@ -176,7 +192,7 @@ Floats!
 
 Let's create the specifications of a float:
 
-![[notes/attachments/Pasted image 20220528174638.png]]]
+![[notes/images/Pasted image 20220528174638.png]]]
 
 now that we have our new data type, we can expand our numbers set:
 
@@ -297,7 +313,7 @@ or explained in another way, multiplying by negative is a 180 degrees rotation, 
 
 if u do 180 twice u do a full rotation, and thus, go in the same direction. a 360degrees rotation, or 2pi radian
 
-![[notes/attachments/Pasted image 20220528204454.png]]
+![[notes/images/Pasted image 20220528204454.png]]
 
 so far our numbers can be drawn on a line that goes from right to left, or left to right, meaning that we are dealing with one dimensional numbers, and the rotations we do can only be by 180. what happens if we create a line thats orthogonal to our current line? meaning, a vertical line. we want a number system that goes right to left, left to right, but also... up or down!
 
@@ -327,7 +343,7 @@ $$\sqrt[2]{-1} = 1i$$
 
 and thus we created the complex plane
 
-![[notes/attachments/Pasted image 20220528211430.png]]
+![[notes/images/Pasted image 20220528211430.png]]
 
 
 $$i^2 = -1$$

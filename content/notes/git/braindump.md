@@ -1,3 +1,11 @@
+---
+title: "braindump"
+date: "2022-05-30 02:20"
+author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
+tags:
+- #
+---
+
 rebase
 
 head
@@ -14,5 +22,11 @@ $ git remote remove upstream
 ```
 
 https://www.kernel.org/pub/software/scm/git/docs/git-remote.html
+
+# Sources
+Own notes
+
+
+
 
 

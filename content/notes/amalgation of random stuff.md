@@ -1,3 +1,12 @@
+---
+title: "amalgation of random stuff"
+date: "2022-05-30 02:20"
+author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
+tags:
+- #list
+---
+
+
 organize this raw data and put them into other folders
 
 levels of explanation
@@ -228,5 +237,12 @@ rich text
 
 
 
+
+
+
+
+
+# Sources
+Own notes
 
 

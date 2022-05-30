@@ -1,3 +1,12 @@
+---
+title: "emmet"
+date: "2022-05-30 02:23"
+author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
+tags:
+- #html
+---
+
+
 [[2022-05-25]]
 
 https://websitesetup.org/wp-content/uploads/2019/11/wsu-css-cheat-sheet-gdocs.pdf
