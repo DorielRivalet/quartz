@@ -194,7 +194,7 @@ Floats!
 
 Let's create the specifications of a float:
 
-![[notes/images/Pasted image 20220528174638.png]]]
+![[notes/images/Pasted image 20220528174638.png]]
 
 now that we have our new data type, we can expand our numbers set:
 
