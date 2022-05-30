@@ -1,4 +1,4 @@
-- [[Internet Infrastructure]]
+- [[notes/the-odin-project/foundations/Internet Infrastructure]]
   - Client and server, packets.
   - Web page -> Website -> Web Server
   - IP Address -> Router -> ISP
@@ -39,7 +39,7 @@
         - Boolean [(which is stored as 1 byte instead of 1 bit)](https://softwareengineering.stackexchange.com/questions/185104/why-is-a-boolean-value-stored-as-a-byte-inside-of-a-computer-when-it-only-requir)
           - Falsy and truthy values
         - Integer
-          - 2 [bytes](../../open-source-society-university/computer-science/bytes)
+          - 2 [bytes](notes/open-source-society-university/computer-science/bytes.md)
             - short, int16
             - unsigned short, uint16
           - 4 bytes
@@ -221,7 +221,7 @@
       - Pseudo-classes
       - Variables
 - Application Programming Interfaces (API)
-  - [[Document Object Model]] (DOM)
+  - [[notes/the-odin-project/foundations/Document Object Model]] (DOM)
     - Nodes and node-lists
     - Capture and bubbling in events.
 - JavaScript (.js)

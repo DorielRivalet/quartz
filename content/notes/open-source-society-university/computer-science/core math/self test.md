@@ -99,7 +99,7 @@ but what is *it*? information
 
 how do we represent an unit of information?
 
-[[bytes]]
+[[notes/open-source-society-university/computer-science/bytes]]
 
 lets allocate 1 byte:
 
@@ -176,7 +176,7 @@ Floats!
 
 Let's create the specifications of a float:
 
-![[Pasted image 20220528174638.png]]]
+![[notes/attachments/Pasted image 20220528174638.png]]]
 
 now that we have our new data type, we can expand our numbers set:
 
@@ -297,7 +297,7 @@ or explained in another way, multiplying by negative is a 180 degrees rotation, 
 
 if u do 180 twice u do a full rotation, and thus, go in the same direction. a 360degrees rotation, or 2pi radian
 
-![[Pasted image 20220528204454.png]]
+![[notes/attachments/Pasted image 20220528204454.png]]
 
 so far our numbers can be drawn on a line that goes from right to left, or left to right, meaning that we are dealing with one dimensional numbers, and the rotations we do can only be by 180. what happens if we create a line thats orthogonal to our current line? meaning, a vertical line. we want a number system that goes right to left, left to right, but also... up or down!
 
@@ -327,7 +327,7 @@ $$\sqrt[2]{-1} = 1i$$
 
 and thus we created the complex plane
 
-![[Pasted image 20220528211430.png]]
+![[notes/attachments/Pasted image 20220528211430.png]]
 
 
 $$i^2 = -1$$
