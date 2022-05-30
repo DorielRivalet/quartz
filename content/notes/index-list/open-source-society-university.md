@@ -1,5 +1,5 @@
 ---
-title: "open-source-society-university-index"
+title: "OSSU index"
 date: "2022-05-30 03:52"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:

@@ -7,6 +7,14 @@ title: Patchouli Computatrum
 
 *"Computers are like humans - they do everything except think." ~ John von Neumann*
 
+
+## Content Lists
+If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
+
+- [All Notes](quartz/notes)
+- [Setup-related Notes](quartz/tags/setup)
+
+
 ## [Knowledge](https://www.youtube.com/watch?v=ViDjDy3j-y8) Index
-- [The Odin Project](notes/index-list/the-odin-project.md)
-- [Open Source Society University](notes/index-list/open-source-society-university.md)
+- [The Odin Project](quartz/notes/index-list/the-odin-project.md)
+- [Open Source Society University](quartz/notes/index-list/open-source-society-university.md)
