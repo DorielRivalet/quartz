@@ -3,7 +3,7 @@ title: "self test"
 date: "2022-05-30 02:28"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- #math
+- math
 ---
 
 

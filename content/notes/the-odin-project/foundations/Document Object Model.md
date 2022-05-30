@@ -3,7 +3,7 @@ title: "Document Object Model"
 date: "2022-05-30 02:22"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- #dom
+- dom
 ---
 
 # Metadata

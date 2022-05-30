@@ -3,7 +3,10 @@ title: "Internet Infrastructure"
 date: "2022-05-30 02:23"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- #analogy #html #css #javascript
+- analogy
+- html
+- css
+- javascript
 ---
 
 

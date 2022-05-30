@@ -3,7 +3,8 @@ title: "arrays"
 date: "2022-05-30 02:23"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- #ruby #arrays
+- ruby
+- arrays
 ---
 
 # Metadata

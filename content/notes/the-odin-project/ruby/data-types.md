@@ -3,7 +3,7 @@ title: "data-types"
 date: "2022-05-30 02:24"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- #data-types
+- data-types
 ---
 
 # Metadata

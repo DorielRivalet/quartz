@@ -3,7 +3,7 @@ title: "conditional logic"
 date: "2022-05-30 02:24"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- #ruby
+- ruby
 ---
 
 
