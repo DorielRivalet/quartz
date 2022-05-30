@@ -145,13 +145,15 @@ what if we want to represent multiple additions in a more succinct way?
 print(1+1+1+1+1+1+1+1+1+1)
 ```
 
+$$ forloop=\sum_{i=0}^{10} 1$$
+
 imagine i wanted to type the above code, but instead of printing 10 by doing 10 operations, i wanted to do it in 1 operation.
 
 2022-05-28 17:47
 
 lets define a function that does that
 
-$$f(num) = num+num+num+num+num$$
+$$f(num) = num+num+num+num+num+num+num+num+num+num$$
 
 ```ruby
 
@@ -159,7 +161,7 @@ def multipleAddition(num)
   puts num.times { |i| print i, " "}
 end
 
-multipleAddition(5)
+multipleAddition(10)
 ```
 
 what is num? it stands for number. its a variable.  a variable may represent a [number](https://en.wikipedia.org/wiki/Number "Number"), a [vector](https://en.wikipedia.org/wiki/Vector_(mathematics) "Vector (mathematics)"), a [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics) "Matrix (mathematics)"), a [function](https://en.wikipedia.org/wiki/Function_(mathematics) "Function (mathematics)"), the [argument of a function](https://en.wikipedia.org/wiki/Argument_of_a_function "Argument of a function"), a [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)"), or an [element](https://en.wikipedia.org/wiki/Element_(mathematics) "Element (mathematics)") of a set. in this case its the argument of a function.
