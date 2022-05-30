@@ -5,3 +5,13 @@ resources
 content/.obsidian
 assets/indices/linkIndex.json
 assets/indices/contentIndex.json
+
+# to exclude Obsidian's settings (including plugin and hotkey configurations)
+.obsidian/
+
+# OR only to exclude workspace cache
+.obsidian/workspace
+
+# Add below lines to exclude OS settings and caches
+.trash/
+.DS_Store

@@ -1,0 +1,284 @@
+- [[Internet Infrastructure]]
+  - Client and server, packets.
+  - Web page -> Website -> Web Server
+  - IP Address -> Router -> ISP
+  - Domain Name Servers
+  - TCP and UDP
+- Virtual Machines
+- Programming in general
+  - [**Problem Solving (most important concept)**](https://www.theodinproject.com/lessons/foundations-problem-solving)
+    - Divide and conquer approach
+    - How to ask good questions
+    - Pseudocode
+  - Compiler
+    - Lexical analyzer
+      - Tokens and lexemes
+        - Reserved words, Operators, Identifiers, Constants, Separators
+        - Example:
+
+        ```lua
+              newvalue = oldvalue + rate * 60
+
+        --[[  Token             Lexeme
+              Identifier      newvalue
+              assignOperation        =
+              Identifier      oldvalue
+              addOperation           +
+              identifier          rate
+              mulOperation           *
+              number                 6
+        ]] 
+        ```
+
+  - Literals
+  - Variables
+    - Declaration and assignment
+    - Data types
+      - Enumeration (enum)
+      - Primitive
+        - Boolean [(which is stored as 1 byte instead of 1 bit)](https://softwareengineering.stackexchange.com/questions/185104/why-is-a-boolean-value-stored-as-a-byte-inside-of-a-computer-when-it-only-requir)
+          - Falsy and truthy values
+        - Integer
+          - 2 [bytes](../../open-source-society-university/computer-science/bytes)
+            - short, int16
+            - unsigned short, uint16
+          - 4 bytes
+            - signed integer, int32
+            - unsigned integer, uint32
+            - float
+          - 8 bytes
+            - double
+        - Char and String
+          - String manipulation
+          - String concatenation `('a'+'b')`
+          - String interpolation`('${a} {b}')`
+          - Escaping `(/)`
+      - Composite
+        - Object `{}`
+        - Array `[]`
+  - Operators
+    - Logical
+      - `AND`(and, &&, ∧, ·, &), `OR`(or, ∥, ||, ∨, +), `NOT`(not,¬, ~, !), `XOR`(exclusive or, ↮, ⊕, ⊻, ≢. Either x or y is true, and not both true), `NAND`(not and, ⊼, !(x && y)), `NOR`(not or, ⊽, !(x || y))
+    - Comparison
+      - `>`(greater than), `<`(lesser than), `>=`(greater or equal than), `<=`(lesser or equal than), `==`(equals), `!=`(not equals)
+    - Ternary operator: `(condition) ? IfTrue : IfFalse`
+  - Functions
+    - Invocation, calls. `functionName()`
+    - Arguments and parameters `function foo(parameters){}; foo(arguments)`
+    - Recursion `function bar(){ if (condition) return; bar()}
+    - Nesting `function f(g())`
+    - Coroutines
+    - Scope. Environment.
+    - Stack trace
+    - [Varargs `(...)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+  - Passing data
+    - Pass by *value*: passing the *data* itself.
+    - Pass by *reference*: pass the *variable* that references the data.
+    - Pass by *share*: pass the *reference* itself, sharing the memory location the variable uses (this is the way JavaScript handles assignments and function parameters).
+  - Language Paradigms
+    - Functional (*e.g.*, Haskell)
+    - Procedural, Imperative, Event-driven (*e.g.*, JavaScript)
+      - Event listeners
+        - Callback functions
+        - Adding and removing
+          - Memory leaks
+            - Garbage collection
+    - Object-oriented (*e.g.*, Java)
+      - Classes
+        - Instance
+        - Inheritance
+        - Singleton
+        - Properties, Methods and Events
+    - Multi-paradigm
+  - Abstraction
+    - Examples: Analog -> Digital -> Binary -> Hexadecimal -> Assembly -> C -> C++ -> Java -> JavaScript. From standard libraries to custom frameworks. Literals (`1`) to Variables (`a := 1`) to Objects (`obj := {a: 1}`) to Classes (`a = object.New("Class");a:ChangeValue(1)`).
+  - Learning
+    - Concepts
+      - Reading documentation
+      - Asking in communities
+      - Analyzing other's code
+      - Implementing proof of concepts (POCs)
+    - [Strategies](https://www.theodinproject.com/lessons/foundations-motivation-and-mindset)
+      - Active and passive learning
+      - Focus mode and diffuse mode
+      - Grit and motivation
+      - Fixed vs growth mindset
+      - Avoiding rabbit holes and information overload. Patience.
+      - Creating analogies, linking to existing ideas, reformulation and recitation.
+      - [Flow mental state](https://en.wikipedia.org/wiki/Flow_(psychology)
+      - Mentoring, helping others.
+		  - Not by showing solutions outright, but by giving direction.
+  - **Data structures**
+    - Arrays
+      - Push and pop
+    - Lists
+      - Key and value pairs
+    - Dictionaries and tables
+      - Indexing, retrieving, insertion `tableName.keyName, tableName["Key Name"]`
+  - **Algorithms**
+    - Time Complexity
+      - Notation
+        - Big O `O(n) example: for element in list`
+    - Sorting data
+    - Binary search
+    - Loops
+      - `for`
+        - Numeric: `for i=start, end, step`
+        - Generic: `for element in list`
+      - `while`, `repeat` or `do while`
+      - Nesting `for i=start,end,step {for j=start,end,step}`
+      - Flow control
+        - `break` (the current loop)
+        - `continue` (to the next iteration)
+    - Conditionals
+      - `if` `else` `else if`
+      - `switch`
+      - Nesting
+  - Regular Expressions (Regex) `\[A-Z]\g+`
+  - Modules, Libraries, Frameworks
+  - Experience terms: Trainee, Junior (JR), Semi-Senior (SSR), Senior (SR)
+  - Field of development terms
+    - Front-End
+      - Graphical User Interfaces (GUI), User Experience (UX), Graphic Design, Interactivity
+    - Back-End
+      - Databases, Data Persistence, Schema, Reliability
+    - DevOps
+      - Deployment, Connectivity
+      - GitHub Actions
+		  - Workflows
+		  - Keys
+		  - Secrets
+		  - Tokens
+    - Full-Stack
+      - Integrity, Synergy, Compatibility
+      - Stack Initials
+        - LAMP (Linux + Apache + MySQL + PHP)
+        - MERN (MongoDB + Express + React + Node.js)
+        - MEAN (MongoDB + Express + Angular + Node.js)
+        - MEVN (MongoDB + Express + Vue + Node.js)
+  - Code style
+    - Case
+      - `camelCase`, `PascalCase`
+    - Design patterns
+      - Creational, structural, behavioral, concurrency
+      - Don't Repeat Yourself (DRY) principle
+        - Refactoring
+      - Anti-patterns
+    - Readability
+		- Cognitive load/strain
+      - Self-documenting code
+    - Source code comments
+  - Integrated Development Environments (IDEs)
+    - *e.g.,* Visual Studio Code, Eclipse
+  - People
+    - Alan Turing, George Boole, John von Neumann, Ada Lovelace
+- Debugging
+  - Chrome Developer Tools
+    - Inspector
+    - Breakpoints
+		- Steps
+    - Console
+    - Device Mode
+  - `print`/`console`, `error` and `warn` functions
+  - Static analysis programs
+    - ESLint, semgrep
+  - Test Driven Development (TDD)
+    - Tools
+      - Jest
+- Markup languages
+  - HTML (.html)
+    - Elements and tags
+  - Markdown (.md)
+    - Formatting
+    - Variants, Extensions, Flavors
+      - GitHub Flavored Markdown (GFM)
+      - [Mermaid](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
+- Style sheet languages
+  - CSS (.css)
+    - Selectors (and properties holding values)
+    - Typography
+      - Typefaces
+        - Fonts
+        - Serif (*e.g*., Arial)
+        - Sans-serif (*e.g*.,Times New Roman)
+    - Character encoding
+      - UTF-8, ASCII, Shift JIS, Unicode
+    - Specificity `!important > id > class; top to bottom; numbers`
+    - Box Model
+      - Padding -> Border -> Margin
+    - Display types
+      - None
+      - Block
+      - Inline
+      - Flex-box
+        - Containers and items
+        - Main and cross axis
+        - Properties and/or shorthands
+          - `flex`, `flex-flow`, `flex-grow`, `flex-shrink`, `flex-basis`, `flex-direction`, `justify-content`, `align-items`, `align-content`, `justify-items`, `gap`
+      - Grid
+        - `grid-template-columns`, `grid-template-rows`, `grid-column-gap`, `grid-row-gap`, `grid-template-areas`, `grid-area`
+      - Pseudo-elements
+      - Pseudo-classes
+      - Variables
+- Application Programming Interfaces (API)
+  - [[Document Object Model]] (DOM)
+    - Nodes and node-lists
+    - Capture and bubbling in events.
+- JavaScript (.js)
+  - Variables
+    - `var`, `let`, `const`
+    - `NaN`, `undefined`, `null`
+    - Post-fixing and prefixing (++varName, varName++)
+    - bigInt (for big numbers)
+    - `typeof` function
+  - Operators
+    - Order of precedence
+    - Unary (one operand)
+      - `+`, `!`
+    - `==`(equal value) and `===`(equal value and data type)
+    - Nullish coalescing operator: `??` (and difference from ||, the OR operator)
+  - Functions
+    - Anonymous (without name)
+    - Arrow: `(input) => output`
+  - Loops
+    - Control Flow
+      - [Labels](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) (they are similar in concept to GOTO)
+  - Runtime environments
+    - Browsers
+      - Compatibility differences
+    - Node.js
+      - Node Version Manager (nvm)
+      - Node Package Manager (npm)
+  - Test Driven Development
+    - Tools
+      - Jest
+    - Assertion (do `x` if failed, do `y` if successful)
+    - Unit testing
+- Command line interface (CLI)
+  - Flags: `-` and `--`. Example: `-f`, `--help`
+- Terminal commands
+  - `mv`(move), `rm`(remove), `mkdir`(make directory), `touch`, `pwd`(present working directory), `cd` (change directory), `code`, `chrome`, `cat`, `ls`
+- File navigation
+  - `..` (to parent directory relative to the present working directory)
+  - `./folderName` (go to this folder relative to the present working directory)
+  - `~` (home directory)
+- Source Control
+	- Version Control Systems (VSC)
+	  - Types and history of version control
+	  - [Git](https://www.theodinproject.com/lessons/foundations-introduction-to-git)
+		- [Difference between workspace and repository](https://stackoverflow.com/questions/59441589/how-is-repository-different-from-workspace)
+		- Commands
+		  - `init`, `push`(to), `pull`(from), `branch`, `reflog`, `log`, `commit`, `rebase`, `add`, `restore`, `status`, `remote`, `clone`, `fetch`,`merge`,`checkout`
+		- Atomic commits, commit frequency
+		- Redaction of commit messages
+		- .gitignore
+- GitHub
+  - Making a repository
+  - Making a GitHub Pages site
+  - Pull requests
+  - SSH Keys
+  - Personal Access Tokens (PATs)
+  - Actions
+  	- Workflows
+- Figma
+- Excalidraw
