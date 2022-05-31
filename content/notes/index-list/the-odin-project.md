@@ -10,6 +10,7 @@ tags:
 - [ruby]()
 - [intermediate html and css]()
 
-![[notes/images/Pasted image 20220530204411.jpg]](https://www.pixiv.net/en/artworks/82220608)
+[![Example Image](notes/images/Pasted-image-20220530204411.jpg)](https://www.pixiv.net/en/artworks/82220608)
+
 
 
