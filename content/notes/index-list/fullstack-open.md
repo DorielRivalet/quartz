@@ -6,7 +6,7 @@ tags:
 - fullstack-open
 ---
 
-- [FSO](tags/fullstack-open)
+- [FSO](../../tags/fullstack-open)
 
 
 ![[notes/images/Pasted image 20220530225554.png]]
@@ -17,5 +17,5 @@ tags:
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
 - [All Notes](notes/)
-- [FSO-related Notes](tags/fullstack-open)
+- [FSO-related Notes](../tags/fullstack-open)
 
