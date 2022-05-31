@@ -4,6 +4,7 @@ date: "2022-05-30 03:52"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - list
+- computer-science
 ---
 
 - [bytes](notes/open-source-society-university/bytes.md)
