@@ -14,3 +14,9 @@ tags:
 
 [![Example Image](https://github.com/DorielRivalet/quartz/blob/hugo/content/notes/images/Pasted-image-20220530204524.jpg?raw=true)](https://www.pixiv.net/en/artworks/54977260)
 
+
+# Content Lists
+If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
+
+- [All Notes](notes/)
+- [OSSU CS-related Notes](tags/computer-science/)
