@@ -2,6 +2,7 @@
 title: "Deploying Quartz to the Web"
 tags:
 - setup
+- quartz
 ---
 
 ## GitHub Pages

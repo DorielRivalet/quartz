@@ -1,5 +1,7 @@
 ---
 title: "CJK + Latex Support (测试)"
+tags:
+- quartz
 ---
 
 ## Chinese, Japanese, Korean Support

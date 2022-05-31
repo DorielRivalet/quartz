@@ -4,6 +4,7 @@ date: "2022-05-30 02:22"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - dom
+- the-odin-project
 ---
 
 # Metadata

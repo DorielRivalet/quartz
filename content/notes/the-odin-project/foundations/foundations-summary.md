@@ -1,5 +1,7 @@
 ---
 title: "foundations summary"
+tags:
+- the-odin-project
 ---
 
 - [[notes/the-odin-project/foundations/internet-infrastructure]]

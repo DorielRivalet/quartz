@@ -2,6 +2,7 @@
 title: "Obsidian Vault Integration"
 tags:
 - setup
+- quartz
 ---
 
 ## Setup

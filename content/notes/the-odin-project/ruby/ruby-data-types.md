@@ -5,6 +5,7 @@ author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - data-types
 - ruby
+- the-odin-project
 ---
 
 # Metadata

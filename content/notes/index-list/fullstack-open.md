@@ -4,6 +4,7 @@ date: "2022-05-30 22:34"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - fullstack-open
+- list
 ---
 
 - [FSO](../../tags/fullstack-open)

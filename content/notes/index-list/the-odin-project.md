@@ -6,6 +6,7 @@ tags:
 - list
 - full-stack
 - web-development
+- the-odin-project
 ---
 
 - [foundations](notes/the-odin-project/foundations/foundations-summary.md)

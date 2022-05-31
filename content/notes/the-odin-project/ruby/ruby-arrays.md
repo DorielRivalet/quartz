@@ -5,6 +5,7 @@ author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - ruby
 - arrays
+- the-odin-project
 ---
 
 # Metadata

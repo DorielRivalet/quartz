@@ -4,6 +4,7 @@ date: "2022-05-30 22:20"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - list
+- miscellaneous
 ---
 
 - [miscellaneous](../../tags/miscellaneous)

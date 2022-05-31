@@ -1,5 +1,7 @@
 ---
 title: "Ignoring Notes"
+tags:
+- quartz
 ---
 
 ### Quartz Ignore

@@ -1,5 +1,7 @@
 ---
 title: "Custom Domain"
+tags:
+- quartz
 ---
 
 ### Registrar

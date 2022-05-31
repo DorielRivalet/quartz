@@ -7,6 +7,7 @@ tags:
 - html
 - css
 - javascript
+- the-odin-project
 ---
 
 

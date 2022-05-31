@@ -2,6 +2,7 @@
 title: "Setup"
 tags:
 - setup
+- quartz
 ---
 
 ## Making your own Quartz
