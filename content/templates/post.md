@@ -7,7 +7,7 @@ tags:
 ---
 
 # Metadata
-{{date}} {{time}}  | {{title}} | [Doriel Rivalet](https://github.com/DorielRivalet)| #untagged
+{{date}} {{time}}  | {{title}} | [Doriel Rivalet](https://github.com/DorielRivalet)
 
 # Content
 

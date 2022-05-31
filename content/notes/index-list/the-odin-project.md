@@ -24,7 +24,7 @@ If you prefer browsing the contents of this site through a list instead of a gra
 - [All Tags](../../tags/)
 - [TOP-related Notes](../../tags/the-odin-project)
 
-## Knowledge Index
+## [Knowledge](https://www.youtube.com/watch?v=ESXVelJz3rs) Index
 - [The Odin Project](notes/index-list/the-odin-project.md)
 - [Open Source Society University](notes/index-list/open-source-society-university.md)
 - [Full Stack Open](notes/index-list/fullstack-open.md)

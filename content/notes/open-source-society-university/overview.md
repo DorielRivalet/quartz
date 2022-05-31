@@ -1,10 +1,25 @@
 ---
-title: "math overview"
+title: "overview"
 date: "2022-05-30 02:28"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - math
 - computer-science
+- logic-gates
+- variables
+- boolean-algebra
+- algebra
+- algorithms
+- data-structures
+- loops
+- object-oriented-programming
+- event-driven-programming
+- programming
+- geometry
+- javascript
+- lua
+- cpp
+- python
 ---
 
 
@@ -15,13 +30,16 @@ Title: overview of math and programming
 
 Author: [Doriel Rivalet](https://github.com/DorielRivalet)
 
-Tags: #math #programming #geometry #javascript #ruby #cpp #lua #python #object-oriented-programming
-
 # Content
 
-let see if i can give my own outline (or rather overview) of math in general in a day, also combine programming with it
+## Preface
+
+let see if i can give my own outline (or rather overview) of math in general in a few days, also combine programming with it
+
+## Zero
 
 lets start with nothing
+
 
 how can we represent nothing?
 
@@ -47,6 +65,34 @@ now, how can we represent the opposite of nothing, i.e. something?
 
 the inverse
 
+## One
+
+which operator can we use to represent the opposite?
+
+$\neg$
+
+so, we do:
+
+$\neg$nothing
+
+$\neg$0
+
+$\neg$0 = 1
+
+how is this done in computers? we can use logic gates
+
+the input we have is 0, the output we want is 1, we can use the NOT logic gate
+
+![[notes/images/Pasted image 20220531190617.jpg]]
+
+
+so now we have the unary operator.
+
+$$-1 = -(1)$$
+$$-(-1) = 1$$
+
+
+
 if we look at one of our hands, we should have 5 fingers. how do we know that we have 5? whats the action that we did to determine that value? counting.
 
 ```python
@@ -63,7 +109,7 @@ $$5 = 1+1+1+1+1$$
 
 [i could show why 1+1=2 but showing hundreds of pages for it is not needed for the general overview i'm aiming for](https://en.wikipedia.org/wiki/Principia_Mathematica)
 
-our hand is an object and we iterated through the elements of the object which in this case are our fingers. the act of counting is the iteration.
+our hand is an array and we iterated through the elements of the array which in this case are our fingers. the act of counting is the iteration.
 
 $$
 \begin{bmatrix}
@@ -83,6 +129,8 @@ we have addition, whats the inverse of it? subtraction
 if we do 1-2 then we get -1, a negative integer
 
 but how is this represented in computers?
+
+## Binary Number
 
 well, lets start over again
 
@@ -115,6 +163,8 @@ it has to be stored in memory.
 but what is *it*? information
 
 how do we represent an unit of information?
+
+## Computer Memory
 
 [[notes/open-source-society-university/bytes]]
 
@@ -150,6 +200,8 @@ $$ forloop=\sum_{i=0}^{10} 1$$
 
 imagine i wanted to type the above code, but instead of printing 10 by doing 10 operations, i wanted to do it in 1 operation.
 
+## Iterated Addition
+
 2022-05-28 17:47
 
 lets define a function that does that
@@ -165,7 +217,9 @@ end
 multipleAddition(10)
 ```
 
-what is num? it stands for number. its a variable.  a variable may represent a [number](https://en.wikipedia.org/wiki/Number "Number"), a [vector](https://en.wikipedia.org/wiki/Vector_(mathematics) "Vector (mathematics)"), a [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics) "Matrix (mathematics)"), a [function](https://en.wikipedia.org/wiki/Function_(mathematics) "Function (mathematics)"), the [argument of a function](https://en.wikipedia.org/wiki/Argument_of_a_function "Argument of a function"), a [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)"), or an [element](https://en.wikipedia.org/wiki/Element_(mathematics) "Element (mathematics)") of a set. in this case its the argument of a function.
+what is num? it stands for number. its a variable.  a mathematical variable may represent a [number](https://en.wikipedia.org/wiki/Number "Number"), a [vector](https://en.wikipedia.org/wiki/Vector_(mathematics) "Vector (mathematics)"), a [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics) "Matrix (mathematics)"), a [function](https://en.wikipedia.org/wiki/Function_(mathematics) "Function (mathematics)"), the [argument of a function](https://en.wikipedia.org/wiki/Argument_of_a_function "Argument of a function"), a [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)"), or an [element](https://en.wikipedia.org/wiki/Element_(mathematics) "Element (mathematics)") of a set; the same way the value of a hash in programming can be a number, a string, an array, or even another hash. 
+
+in this case its the argument of a function.
 
 in programming, variables represent a value that is in memory
 
@@ -200,6 +254,17 @@ Let's create the specifications of a float:
 now that we have our new data type, we can expand our numbers set:
 
 $${-1,-0.65345346,0,1,3.1415}$$
+
+## Binary Operation
+
+lets review something we did at the beginning: we went from unary operations to the binary numbers. but are there binary operations? yes!
+
+
+## Ternary Operation
+
+
+
+## Iterated Multiplication
 
 now then, what if we want to represent multiple multiplications in a more succinct way?
 
@@ -265,7 +330,9 @@ or m times ten raised to the power of n, where _n_ is an [integer](https:/
  so for example, the number 1024, which in binary is ```10000000000```, which in hexadecimal is ```0x400```, which can be a uint16 or int16 datatype, which is $$2^{10}$$; can also be expressed as $$1.024*10^3$$.
  
  but some may ask: we have + for addition, \* for multiplication and ^ for exponentiation, aren't we missing a symbol (*i.e*, + and \* and ^) and the action it would represent (*i.e*, addition, multiplication and exponentiation) ?
- 
+
+## Iterated Exponentiation
+
  enter arrow notation:
  
 $$2\uparrow4 = 2^4 = 16$$
@@ -294,10 +361,59 @@ console.log(multipleExponentiation(2,2,4))
 
 $$
 \begin{bmatrix}
-1 & 2 & 3 & 4 & 5\\
-addition & multiplication & exponentiation & tetration & pentation
+-5 & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5\\
+addition & superRoot|superLogarithm & logarithm|root & subtract & unary & addition & multiplication & exponentiation & tetration & pentation
 \end{bmatrix}
 $$
+
+## Space = Time?
+
+we use nested ```for``` loops in a program to write nested exponentiation, also called a tower of powers.
+
+the act of running the above program is an event. an event can have two properties: the time that it happened and the space it happened at.
+
+```javascript
+const program = document.querySelector(".programResult")
+
+function printProperties(){
+	print(`time: ${this.time}, space: ${this.space}`)
+}
+
+program.addEventListener("computed",printProperties)
+```
+
+
+```lua
+local event = {}
+event.position = [1.35,453,36.5]
+event.time = "03:46:50.103"
+print("result: "..event.position[0]..","..event.position[1]...","...event.position[2].." "..event["time"]) -- result: 1.35,453,36.5 03:46:50.103
+```
+
+if we want to know for how long this program is going to run, meaning the time complexity of the algorithm, we can use big O notation.
+
+```javascript
+	for (let i = 0;i <= arrows;i++){
+		for (let j = 0;j <= num2;j++){
+			accumulator *=  num;
+		}
+	}
+```
+
+the outermost for loop ends depending on what the arrows variable value is, lets denote this as N (if instead of ```i <= arrows``` it was ```i <= 2```, we would write down 1, because
+
+
+
+
+we can write down the time complexity... how can we determine the space complexity?
+
+
+
+
+
+
+
+## A Different Dimension
 
 let's answer the second question: what if the number is negative in the square root?
 
@@ -308,6 +424,7 @@ we can't multiply something times itself and get a negative number, see:
 2 times 2, 4. -2 times -2, 4.
 
 but why is -2 times -2 equal to 4?
+
 
 lets review our current set of numbers:
 
@@ -415,3 +532,13 @@ https://en.wikipedia.org/wiki/Logarithm
 https://en.wikipedia.org/wiki/Tetration
 
 https://math.stackexchange.com/questions/1784166/why-are-there-no-triernions-3-dimensional-analogue-of-complex-numbers-quate
+
+http://davidagler.com/teaching/logic/handouts/supplemental_material/MarkdownForSymbolicLogic.html
+
+https://911electronic.com/de/how-does-a-not-gate-work/
+
+https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/
+
+https://en.wikipedia.org/wiki/Time
+
+https://en.wikipedia.org/wiki/Hyperoperation
