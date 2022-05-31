@@ -6,7 +6,7 @@ tags:
 - list
 ---
 
-- [miscellaneous](tags/miscellaneous)
+- [miscellaneous](tags/setup)
 
 
 ![[notes/images/Pasted image 20220530225258.png]]
