@@ -16,9 +16,9 @@ If you prefer browsing the contents of this site through a list instead of a gra
 
 
 ## [Knowledge](https://www.youtube.com/watch?v=ViDjDy3j-y8) Index
-- [The Odin Project](notes/index-list/the-odin-project.md)
-- [Open Source Society University](notes/index-list/open-source-society-university.md)
-- [Full Stack Open](notes/index-list/fullstack-open.md)
-- [Miscellaneous](notes/index-list/miscellaneous.md)
-- [Quartz](notes/index-list/quartz.md)
+- [The Odin Project](index-list/the-odin-project.md)
+- [Open Source Society University](index-list/open-source-society-university.md)
+- [Full Stack Open](index-list/fullstack-open.md)
+- [Miscellaneous](index-list/miscellaneous.md)
+- [Quartz](index-list/quartz.md)
 
