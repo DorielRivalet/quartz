@@ -5,6 +5,7 @@ author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - list
 - visual-studio-code
+- miscellaneous
 ---
 
 - github copilot

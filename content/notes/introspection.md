@@ -4,6 +4,7 @@ date: "2022-05-30 03:44"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - definition
+- miscellaneous
 ---
 
 
