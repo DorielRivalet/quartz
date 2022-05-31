@@ -12,7 +12,7 @@ tags:
 - [ruby]()
 - [intermediate html and css]()
 
-[![Example Image](notes/images/Pasted-image-20220530204411.jpg)](https://www.pixiv.net/en/artworks/82220608)
+[![Example Image](https://github.com/DorielRivalet/quartz/blob/hugo/content/notes/images/Pasted-image-20220530204411.jpg?raw=true)](https://www.pixiv.net/en/artworks/82220608)
 
 
 
