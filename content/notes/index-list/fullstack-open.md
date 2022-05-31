@@ -18,7 +18,7 @@ If you prefer browsing the contents of this site through a list instead of a gra
 
 - [All Notes](notes/)
 - [All Tags](../../tags/)
-- [FSO-related Notes](../../fullstack-open)
+- [FSO-related Notes](../../tags/fullstack-open)
 
 ## Knowledge Index
 - [The Odin Project](notes/index-list/the-odin-project.md)

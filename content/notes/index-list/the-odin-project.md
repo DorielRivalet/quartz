@@ -11,7 +11,7 @@ tags:
 
 - [foundations](notes/the-odin-project/foundations/foundations-summary.md)
 
-- [ruby](tags/ruby)
+- [ruby](../../tags/ruby)
 
 - [intermediate html and css]()
 
