@@ -9,7 +9,7 @@ tags:
 ---
 
 - [foundations](notes/the-odin-project/foundations/foundations-summary.md)
-- [ruby]()
+- [ruby](tags/ruby)
 - [intermediate html and css]()
 
 [![Example Image](https://github.com/DorielRivalet/quartz/blob/hugo/content/notes/images/Pasted-image-20220530204411.jpg?raw=true)](https://www.pixiv.net/en/artworks/82220608)

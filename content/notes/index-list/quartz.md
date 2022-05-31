@@ -8,7 +8,7 @@ tags:
 - list
 ---
 
-- [quartz](notes/quartz/)
+- [quartz](tags/quartz)
 
 ![[notes/images/Pasted image 20220530222841.png]]
 

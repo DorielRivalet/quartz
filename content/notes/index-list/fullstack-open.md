@@ -6,7 +6,7 @@ tags:
 - fullstack-open
 ---
 
-- [FSO](notes/fullstack-open/)
+- [FSO](tags/fullstack-open)
 
 
 ![[notes/images/Pasted image 20220530225554.png]]
