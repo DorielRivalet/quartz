@@ -16,7 +16,8 @@ tags:
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
 - [All Notes](notes/)
-- [All Tags](tags/)
+- [All Tags](../../tags/)
+- [FSO-related Notes](../../fullstack-open)
 
 ## Knowledge Index
 - [The Odin Project](notes/index-list/the-odin-project.md)

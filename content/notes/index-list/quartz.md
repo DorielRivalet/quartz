@@ -18,5 +18,13 @@ tags:
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
 - [All Notes](notes/)
+- [All Tags](../../tags/)
 - [quartz-related Notes](../../tags/quartz)
+
+## Knowledge Index
+- [The Odin Project](notes/index-list/the-odin-project.md)
+- [Open Source Society University](notes/index-list/open-source-society-university.md)
+- [Full Stack Open](notes/index-list/fullstack-open.md)
+- [Miscellaneous](notes/index-list/miscellaneous.md)
+- [Quartz](notes/index-list/quartz.md)
 
