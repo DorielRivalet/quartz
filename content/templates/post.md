@@ -6,6 +6,11 @@ tags:
 - untagged
 ---
 
+# Metadata
+{{date}} {{time}}  | {{title}} | [Doriel Rivalet](https://github.com/DorielRivalet)| #untagged
+
+# Content
+
 
 # Sources
 Own notes
