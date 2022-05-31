@@ -19,5 +19,5 @@ tags:
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
 - [All Notes](notes/)
-- [TOP-related Notes](notes/the-odin-project)
+- [TOP-related Notes](tags/the-odin-project)
 
