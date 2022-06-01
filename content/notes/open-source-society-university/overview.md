@@ -410,7 +410,7 @@ they would take 3 inputs as arguments.
 let isRaining = false;
 
 function grabCoat(){
-	print "Grab coat!"
+	console.log("Grab coat!")
 }
 
 let action = isRaining ? grabCoat() : "It's not raining";
