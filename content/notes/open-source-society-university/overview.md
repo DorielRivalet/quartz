@@ -22,6 +22,7 @@ tags:
 - python
 - abstraction
 - physics
+- mathematical-duality
 ---
 
 
@@ -36,12 +37,11 @@ Author: [Doriel Rivalet](https://github.com/DorielRivalet)
 
 ## Preface
 
-let see if i can give my own outline (or rather overview) of math in general in a few days, also combine programming with it
+This article will be updated occasionally, as my own understanding of math and programming improve over time.
 
 ## Zero
 
-lets start with nothing
-
+Let's start with nothing
 
 how can we represent nothing?
 
@@ -63,11 +63,19 @@ nil
 null
 ```
 
+```
+false
+```
+
 now, how can we represent the opposite of nothing, i.e. something? 
 
 the inverse
 
 ## One
+
+```
+true
+```
 
 which operator can we use to represent the opposite?
 
@@ -81,19 +89,33 @@ $\neg$0
 
 $\neg$0 = 1
 
-how is this done in computers? we can use logic gates
+how is this done in [computers](notes/open-source-society-university/computer.md)? we can use logic gates
 
 the input we have is 0, the output we want is 1, we can use the NOT logic gate
 
 ![[notes/images/Pasted image 20220531190617.jpg]]
 
+$$A = 0$$
+$$\overline A = 1$$
 
 so now we have the unary operator.
 
 $$-1 = -(1)$$
 $$-(-1) = 1$$
+```ruby
+a = false
+a = not a
+puts a #true
+```
 
+```javascript
+let a = false
+console.log(!a) //true
+a = !a
+console.log(!a) //false
+```
 
+## Counting
 
 if we look at one of our hands, we should have 5 fingers. how do we know that we have 5? whats the action that we did to determine that value? counting.
 
@@ -225,14 +247,14 @@ in this case its the argument of a function.
 
 in programming, variables represent a value that is in memory
 
-```text
+```python
 
-ourMemory = 00000000
-num = 5
+ourMemory = 0x00000000;
+num = 5;
 
-ourMemory = num
+ourMemory = num;
 
-print(ourMemory) //returns 00000101
+print(ourMemory) #returns 00000101
 ```
 
 lets create a new operation and represent it by the symbol * and call it multiplication
@@ -263,20 +285,141 @@ $${-1,-0.65345346,0,1,3.1415}$$
 
 lets review something we did at the beginning: we went from unary operations to the binary numbers. but are there binary operations? yes!
 
-We have 1 unary operator: NOT
+We have 1 unary operator so far: NOT
 
 its called unary because of one operand
 
-if we have two operands, it becomes binary
+if we operate with two operands, we are using a binary operator.
+
+lets create a binary operator
+
+lets name our inputs A and B, and lets assign them each the value of 1
+
+```ruby
+a = 1
+b = 1
+```
+
+now, we want our operator to return 1 when both of our operands are 1, and 0 in any other case
+
+```ruby
+def ourBinaryOperator(a=0,b=0)
+	if a==0 return 0
+	if b==0 return 0
+	return 1
+end
+
+puts ourBinaryOperator(1,1) #returns 1
+```
 
 
 
+$$
+y = f(a,b) = \left\{
+        \begin{array}{ll}
+            1 & \quad a = 1 \text{ and} \, b=1 \\
+            0 & \quad a = 0 \text{ or} \,b=0
+        \end{array}
+    \right.
+$$
 
+Let's call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.
+$$A\land B$$
+$$A\,. B$$
 
+```ruby
+# OR gate
+def ourBinaryOperator(a=0,b=0)
+	if a==1 return 1
+	if b==1 return 1
+	return 0
+end
+
+puts ourBinaryOperator(1,0) #returns 1
+```
+
+$$
+y = f(a,b) = \left\{
+        \begin{array}{ll}
+            1 & \quad a = 1 \text{ or} \, b=1 \\
+            0 & \quad a = 0 \text{ and} \,b=0
+        \end{array}
+    \right.
+$$
+$$A\lor B$$
+$$A+B$$
+And thus we can infer:
+
+$$\overline{A\land B}=\overline A \lor\overline B$$
+$$\overline{A\lor B}=\overline A \land\overline B$$
+The rules can be expressed in English as:
+
+-   The negation of a disjunction is the conjunction of the negations
+-   The negation of a conjunction is the disjunction of the negations
+
+or
+
+-   The [complement](https://en.wikipedia.org/wiki/Complement_(set_theory) "Complement (set theory)") of the union of two sets is the same as the intersection of their complements
+-   The complement of the intersection of two sets is the same as the union of their complements
+
+or
+
+-   not (A or B) = (not A) and (not B)
+-   not (A and B) = (not A) or (not B),
+
+where "A or B" is an "[inclusive or](https://en.wikipedia.org/wiki/Inclusive_or "Inclusive or")" meaning _at least_ one of A or B rather than an "[exclusive or](https://en.wikipedia.org/wiki/Exclusive_or "Exclusive or")" that means _exactly_ one of A or B.
+
+In [set theory](https://en.wikipedia.org/wiki/Set_theory "Set theory") and [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra_(logic) "Boolean algebra (logic)"), these are written formally as
+
+$$\overline{A\cap B}=\overline A \cup\overline B$$
+$$\overline{A\cup B}=\overline A \cap\overline B$$
+
+where
+
+-   A and B are sets,
+-   $$\overline A$$ is the complement of A,
+-   $$\cap$$ is the [intersection](https://en.wikipedia.org/wiki/Intersection_(set_theory) "Intersection (set theory)"), and
+-  $$\cup$$ is the [union](https://en.wikipedia.org/wiki/Union_(set_theory) "Union (set theory)").
+
+In [formal language](https://en.wikipedia.org/wiki/Formal_language "Formal language"), the rules are written as
+
+$$\displaystyle\neg (P\lor Q)\iff (\neg P)\land (\neg Q),\neg (P\lor Q)\iff (\neg P)\land (\neg Q)$$
+
+and
+
+$$\displaystyle \neg (P\land Q)\iff (\neg P)\lor (\neg Q)\neg (P\land Q)\iff (\neg P)\lor (\neg Q)$$
+
+where
+
+-   _P_ and _Q are propositions,_
+-   $$\neg$$ is the negation logic operator (NOT),
+-   $$\land$$ is the conjunction logic operator (AND),
+-     $$\lor$$ is the disjunction logic operator (OR),
+-   $$\iff$$ is a [metalogical](https://en.wikipedia.org/wiki/Metalogic "Metalogic") symbol meaning "can be replaced in a [logical proof](https://en.wikipedia.org/wiki/Formal_proof "Formal proof") with".
 
 ## Ternary Operation
+We have unary operator, binary operators... what about ternary operators?
+they would take 3 inputs as arguments.
 
+```javascript
+let isRaining = false;
 
+function grabCoat(){
+	print "Grab coat!"
+}
+
+let action = isRaining ? grabCoat() : "It's not raining";
+console.log(isRaining); //its not raining
+```
+
+$$
+y = f(a,b,c) = \left\{
+        \begin{array}{ll}
+            b & \quad a = 1\\
+            c & \quad a = 0
+        \end{array}
+    \right.
+$$
 
 ## Iterated Multiplication
 
@@ -610,3 +753,9 @@ https://www.youtube.com/watch?v=4PdegmlQ-x0
 https://www.faceprep.in/data-structures/space-complexity/
 
 https://www.baeldung.com/cs/space-complexity
+
+https://www.math-linux.com/latex-26/faq/latex-faq/article/latex-piecewise-function
+
+https://www.geeksforgeeks.org/time-complexity-and-space-complexity/
+
+https://en.wikipedia.org/wiki/De_Morgan%27s_laws

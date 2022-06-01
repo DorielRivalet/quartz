@@ -12,6 +12,10 @@ organize this raw data and put them into other folders
 
 levels of explanation
 
+mean mode median, geometric average, pythagoras
+
+https://en.wikipedia.org/wiki/Elvis_operator
+
 Monte_Carlo_method
 
 derivatives and integrals
