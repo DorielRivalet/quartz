@@ -5,7 +5,7 @@ Content Preface This article will be updated occasionally, as my own understandi
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
 <script src=https://dorielrivalet.github.io/quartz/js/popover.688c5dcb89a57776d7f1cbeaf6f7c44b.min.js></script>
-<script>const BASE_URL="https://dorielrivalet.github.io/quartz/",fetchData=Promise.all([fetch("https://dorielrivalet.github.io/quartz/indices/linkIndex.5895831f96210b26036a737cb3208d8c.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dorielrivalet.github.io/quartz/indices/contentIndex.96c53e3511f7a8bef357fb161dbbafbd.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),draw=()=>{const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(draw);e.textContent="",drawGraph("https://dorielrivalet.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0),initPopover("https://dorielrivalet.github.io/quartz",!0,!0),renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
+<script>const BASE_URL="https://dorielrivalet.github.io/quartz/",fetchData=Promise.all([fetch("https://dorielrivalet.github.io/quartz/indices/linkIndex.5895831f96210b26036a737cb3208d8c.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dorielrivalet.github.io/quartz/indices/contentIndex.5636d2e3227341e883b78e039b20fc66.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),draw=()=>{const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(draw);e.textContent="",drawGraph("https://dorielrivalet.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0),initPopover("https://dorielrivalet.github.io/quartz",!0,!0),renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
     import { attachSPARouting } from "https:\/\/dorielrivalet.github.io\/quartz\/js\/router.9a6d7a1d38ca8b3310438bee1998ae15.min.js"
     attachSPARouting(draw)
   </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
@@ -116,9 +116,7 @@ y = f(a,b) = \left{
 1 & \quad a = 1 \text{ and} , b=1 \\0 & \quad a = 0 \text{ or} ,b=0
 \end{array}
 \right.
-$$</p><p>Let&rsquo;s call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.
-$$A\land B$$
-$$A,. B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013242.png" title="/quartz/notes/images/Pasted image 20220601013242.png"></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+$$</p><p>Let&rsquo;s call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.</p><p>$$A\land B$$</p><p>$$A,. B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013242.png" title="/quartz/notes/images/Pasted image 20220601013242.png"></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -140,18 +138,12 @@ y = f(a,b) = \left{
 1 & \quad a = 1 \text{ or} , b=1 \\0 & \quad a = 0 \text{ and} ,b=0
 \end{array}
 \right.
-$$
-$$A\lor B$$
-$$A+B$$
-<img src="/quartz/notes/images/Pasted image 20220601013257.png" title="/quartz/notes/images/Pasted image 20220601013257.png"></p><p>And thus we can infer:</p><p>$$\overline{A\land B}=\overline A \lor\overline B$$
-$$\overline{A\lor B}=\overline A \land\overline B$$
-The rules can be expressed in English as:</p><ul><li>The negation of a disjunction is the conjunction of the negations</li><li>The negation of a conjunction is the disjunction of the negations</li></ul><p>or</p><ul><li>The 
+$$</p><p>$$A\lor B$$</p><p>$$A+B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013257.png" title="/quartz/notes/images/Pasted image 20220601013257.png"></p><p>And thus we can infer:</p><p>$$\overline{A\land B}=\overline A \lor\overline B$$</p><p>$$\overline{A\lor B}=\overline A \land\overline B$$</p><p>The rules can be expressed in English as:</p><ul><li>The negation of a disjunction is the conjunction of the negations</li><li>The negation of a conjunction is the disjunction of the negations</li></ul><p>or</p><ul><li>The 
 <a href=https://en.wikipedia.org/wiki/Complement_%28set_theory%29 rel=noopener>complement</a> of the union of two sets is the same as the intersection of their complements</li><li>The complement of the intersection of two sets is the same as the union of their complements</li></ul><p>or</p><ul><li>not (A or B) = (not A) and (not B)</li><li>not (A and B) = (not A) or (not B),</li></ul><p>where &ldquo;A or B&rdquo; is an &ldquo;
 <a href=https://en.wikipedia.org/wiki/Inclusive_or rel=noopener>inclusive or</a>&rdquo; meaning <em>at least</em> one of A or B rather than an &ldquo;
 <a href=https://en.wikipedia.org/wiki/Exclusive_or rel=noopener>exclusive or</a>&rdquo; that means <em>exactly</em> one of A or B.</p><p>In 
 <a href=https://en.wikipedia.org/wiki/Set_theory rel=noopener>set theory</a> and 
-<a href=https://en.wikipedia.org/wiki/Boolean_algebra_%28logic%29 rel=noopener>Boolean algebra</a>, these are written formally as</p><p>$$\overline{A\cap B}=\overline A \cup\overline B$$
-$$\overline{A\cup B}=\overline A \cap\overline B$$</p><p>where</p><ul><li>A and B are sets,</li><li>$$\overline A$$ is the complement of A,</li><li>$$\cap$$ is the 
+<a href=https://en.wikipedia.org/wiki/Boolean_algebra_%28logic%29 rel=noopener>Boolean algebra</a>, these are written formally as</p><p>$$\overline{A\cap B}=\overline A \cup\overline B$$</p><p>$$\overline{A\cup B}=\overline A \cap\overline B$$</p><p>where</p><ul><li>A and B are sets,</li><li>$$\overline A$$ is the complement of A,</li><li>$$\cap$$ is the 
 <a href=https://en.wikipedia.org/wiki/Intersection_%28set_theory%29 rel=noopener>intersection</a>, and</li><li>$$\cup$$ is the 
 <a href=https://en.wikipedia.org/wiki/Union_%28set_theory%29 rel=noopener>union</a>.</li></ul><p>In 
 <a href=https://en.wikipedia.org/wiki/Formal_language rel=noopener>formal language</a>, the rules are written as</p><p>$$\displaystyle\neg (P\lor Q)\iff (\neg P)\land (\neg Q),\neg (P\lor Q)\iff (\neg P)\land (\neg Q)$$</p><p>and</p><p>$$\displaystyle \neg (P\land Q)\iff (\neg P)\lor (\neg Q)\neg (P\land Q)\iff (\neg P)\lor (\neg Q)$$</p><p>where</p><ul><li><em>P</em> and <em>Q are propositions,</em></li><li>$$\neg$$ is the negation logic operator (NOT),</li><li>$$\land$$ is the conjunction logic operator (AND),</li><li><pre><code>$$\lor$$ is the disjunction logic operator (OR),
