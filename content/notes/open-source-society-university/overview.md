@@ -313,8 +313,6 @@ end
 puts ourBinaryOperator(1,1) #returns 1
 ```
 
-
-
 $$
 y = f(a,b) = \left\{
         \begin{array}{ll}
@@ -325,7 +323,9 @@ y = f(a,b) = \left\{
 $$
 
 Let's call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.
+
 $$A\land B$$
+
 $$A\,. B$$
 
 ![[notes/images/Pasted image 20220601013242.png]]
@@ -349,14 +349,19 @@ y = f(a,b) = \left\{
         \end{array}
     \right.
 $$
+
 $$A\lor B$$
+
 $$A+B$$
+
 ![[notes/images/Pasted image 20220601013257.png]]
 
 And thus we can infer:
 
 $$\overline{A\land B}=\overline A \lor\overline B$$
+
 $$\overline{A\lor B}=\overline A \land\overline B$$
+
 The rules can be expressed in English as:
 
 -   The negation of a disjunction is the conjunction of the negations
@@ -377,6 +382,7 @@ where "A or B" is an "[inclusive or](https://en.wikipedia.org/wiki/Inclusive_or 
 In [set theory](https://en.wikipedia.org/wiki/Set_theory "Set theory") and [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra_(logic) "Boolean algebra (logic)"), these are written formally as
 
 $$\overline{A\cap B}=\overline A \cup\overline B$$
+
 $$\overline{A\cup B}=\overline A \cap\overline B$$
 
 where
