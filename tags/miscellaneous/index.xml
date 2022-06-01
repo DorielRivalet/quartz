@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>miscellaneous on</title><link>https://dorielrivalet.github.io/quartz/tags/miscellaneous/</link><description>Recent content in miscellaneous on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://dorielrivalet.github.io/quartz/tags/miscellaneous/index.xml" rel="self" type="application/rss+xml"/><item><title>amalgation of random stuff</title><link>https://dorielrivalet.github.io/quartz/notes/miscellaneous/amalgation-of-random-stuff/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/miscellaneous/amalgation-of-random-stuff/</guid><description>organize this raw data and put them into other folders
 levels of explanation
-mean mode median, geometric average, pythagoras
-https://en.</description></item><item><title>braindump</title><link>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</guid><description>encryption-decryption: XOR&amp;rsquo;ed, obfuscation, steganography, deobfuscator
+Memoization
+scalar vector matrix
+pair and tuple and sets and arrays and queues and stacks and trees</description></item><item><title>braindump</title><link>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</guid><description>encryption-decryption: XOR&amp;rsquo;ed, obfuscation, steganography, deobfuscator
 logic gates
 NAND gates
 u can make anything with just nand
