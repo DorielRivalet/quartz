@@ -12,6 +12,20 @@ organize this raw data and put them into other folders
 
 levels of explanation
 
+Memoization
+
+scalar vector matrix
+
+pair and tuple and sets and arrays and queues and stacks and trees
+
+a star for mazes, A*
+
+dijkstra
+
+plank units
+
+entropy
+
 mean mode median, geometric average, pythagoras
 
 https://en.wikipedia.org/wiki/Elvis_operator

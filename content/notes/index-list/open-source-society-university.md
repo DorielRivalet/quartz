@@ -9,7 +9,7 @@ tags:
 
 - [bytes](notes/open-source-society-university/bytes.md)
 - [abstraction](notes/open-source-society-university/abstraction.md)
-- [math overview](notes/open-source-society-university/overview.md)
+- [overview](notes/open-source-society-university/overview.md)
 
 
 [![Example Image](https://github.com/DorielRivalet/quartz/blob/hugo/content/notes/images/Pasted-image-20220530204524.jpg?raw=true)](https://www.pixiv.net/en/artworks/54977260)

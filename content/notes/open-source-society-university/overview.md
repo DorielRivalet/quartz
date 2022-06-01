@@ -23,6 +23,7 @@ tags:
 - abstraction
 - physics
 - mathematical-duality
+- set-theory
 ---
 
 
@@ -327,6 +328,8 @@ Let's call the logic gate that returns 1 when both values are 1, the AND gate; a
 $$A\land B$$
 $$A\,. B$$
 
+![[notes/images/Pasted image 20220601013242.png]]
+
 ```ruby
 # OR gate
 def ourBinaryOperator(a=0,b=0)
@@ -348,6 +351,8 @@ y = f(a,b) = \left\{
 $$
 $$A\lor B$$
 $$A+B$$
+![[notes/images/Pasted image 20220601013257.png]]
+
 And thus we can infer:
 
 $$\overline{A\land B}=\overline A \lor\overline B$$
@@ -502,7 +507,6 @@ $$2\uparrow\uparrow4 = 2^{2^{2^{2}}} = 2^{16} = 65536 = 0x10000 = 0b100000000000
 tetration: (tetra comes from four, the same way penta comes from five). now we found a pattern: hexa means six, that means hexation would be whats after pentation, and so on. but lets just stick with explaining tetration for now.
 
 ```javascript
-
 function multipleExponentiation(num, arrows, num2){
   let accumulator = num;
 	for (let i = 0;i <= arrows;i++){
@@ -514,7 +518,6 @@ function multipleExponentiation(num, arrows, num2){
 }
 
 console.log(multipleExponentiation(2,2,4))
-
 ```
 
 $$
@@ -759,3 +762,5 @@ https://www.math-linux.com/latex-26/faq/latex-faq/article/latex-piecewise-functi
 https://www.geeksforgeeks.org/time-complexity-and-space-complexity/
 
 https://en.wikipedia.org/wiki/De_Morgan%27s_laws
+
+https://en.wikipedia.org/wiki/Logic_gate
