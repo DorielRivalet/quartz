@@ -20,6 +20,8 @@ tags:
 - lua
 - cpp
 - python
+- abstraction
+- physics
 ---
 
 
@@ -257,7 +259,19 @@ $${-1,-0.65345346,0,1,3.1415}$$
 
 ## Binary Operation
 
+2022-05-31 20:27
+
 lets review something we did at the beginning: we went from unary operations to the binary numbers. but are there binary operations? yes!
+
+We have 1 unary operator: NOT
+
+its called unary because of one operand
+
+if we have two operands, it becomes binary
+
+
+
+
 
 
 ## Ternary Operation
@@ -269,6 +283,7 @@ lets review something we did at the beginning: we went from unary operations to 
 now then, what if we want to represent multiple multiplications in a more succinct way?
 
 ```lua
+--exponentiation?
 print(2*2*2*2*2*2)
 ```
 
@@ -362,13 +377,17 @@ console.log(multipleExponentiation(2,2,4))
 $$
 \begin{bmatrix}
 -5 & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5\\
-addition & superRoot|superLogarithm & logarithm|root & subtract & unary & addition & multiplication & exponentiation & tetration & pentation
+pentaLogarithm||pentaRoot & superRoot||superLogarithm & logarithm||root & division & subtract & succesor & addition & multiplication & exponentiation & tetration & pentation
 \end{bmatrix}
 $$
 
-## Space = Time?
+Successor is doing a+1, addition is doing a+b
 
-we use nested ```for``` loops in a program to write nested exponentiation, also called a tower of powers.
+Down arrow notation can be used to denote a logarithmic-type inverse of the up-arrow notation
+
+## Space === Time?
+
+we used nested ```for``` loops in a program to write nested exponentiation, also called a tower of powers.
 
 the act of running the above program is an event. an event can have two properties: the time that it happened and the space it happened at.
 
@@ -393,25 +412,64 @@ print("result: "..event.position[0]..","..event.position[1]...","...event.positi
 if we want to know for how long this program is going to run, meaning the time complexity of the algorithm, we can use big O notation.
 
 ```javascript
-	for (let i = 0;i <= arrows;i++){
-		for (let j = 0;j <= num2;j++){
-			accumulator *=  num;
-		}
+for (let i = 0;i <= arrows;i++){ //O(N)
+	for (let j = 0;j <= num2;j++){ // O(N)
+		accumulator *=  num;
 	}
+}
+//N*N = N^2
 ```
 
-the outermost for loop ends depending on what the arrows variable value is, lets denote this as N (if instead of ```i <= arrows``` it was ```i <= 2```, we would write down 1, because
 
+$$O(n^2)$$
 
+if instead of having a variable number, ```i <= arrows``` ,we had a constant number, ```i <= 10000000000000```, the time complexity would be
 
+```javascript
+for (let i = 0;i <= 10000000000000;i++){ //O(1) because 10000000000000 is a constant
+	for (let j = 0;j <= num2;j++){ // O(N) because num2 is variable
+		accumulator *=  num;
+	}
+}
+//N*1 = N
+```
+
+$$O(N)$$
+we use the dominant term and discard the coefficients, why? because for example, the square of 64 is 4096. If you add that number to 2⁶⁴, it will be lost outside the significant digits.
+
+the highest order
 
 we can write down the time complexity... how can we determine the space complexity?
 
+The space complexity is related to how much memory the program will use. In other words, the **total amount of memory space used by an algorithm/program including the space of input values for execution**.
 
+lets see what are our inputs:
+```javascript
+multipleExponentiation(2,2,4)
+console.log(typeof(2)) //number
+```
 
+so we put 3 arguments into the multipleExponentiation function, those 3 arguments are the same data type: number.
 
+if we go to the [JavaScript docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures), we see that the *number* data type occupies 8 bytes (64 bits).
 
+```javascript
+function multipleExponentiation(num, arrows, num2){ //8 bytes*3=24 bytes
+  let accumulator = num; //24+8=32 bytes
+	for (let i = 0;i <= arrows;i++){ //32+8 = 40 bytes
+		for (let j = 0;j <= num2;j++){ //40+8 = 48 bytes
+			accumulator *=  num; //accumulator is already defined
+		}
+	}
+	return accumulator; //accumulator is already defined
+}
 
+// 48 = constant = 1
+```
+
+And thus the space complexity of the function is
+
+$$O(1)$$
 
 ## A Different Dimension
 
@@ -542,3 +600,13 @@ https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesn
 https://en.wikipedia.org/wiki/Time
 
 https://en.wikipedia.org/wiki/Hyperoperation
+
+https://googology.fandom.com/wiki/Tetration#Super_root
+
+https://oeis.org/wiki/Knuth%27s_arrow_notation#Down-arrow_notation
+
+https://www.youtube.com/watch?v=4PdegmlQ-x0
+
+https://www.faceprep.in/data-structures/space-complexity/
+
+https://www.baeldung.com/cs/space-complexity

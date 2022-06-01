@@ -14,6 +14,17 @@ levels of explanation
 
 Monte_Carlo_method
 
+derivatives and integrals
+
+derivates, integrals: 
+- A', velocity' = acceleration
+- velocity then acceleration then
+- succession then addition then multiplication then exponentiation then tetration then pentation then hexation
+- 0 then 1 then then n then n^2 then n^n then n!
+- observation then data then information then knowledge then wisdom
+
+
+
 ergodic theory, set theory, ordinal theory
 
 linear programming
