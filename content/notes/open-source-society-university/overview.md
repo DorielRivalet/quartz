@@ -414,7 +414,7 @@ function grabCoat(){
 }
 
 let action = isRaining ? grabCoat() : "It's not raining";
-console.log(isRaining); //its not raining
+console.log(action); //its not raining
 ```
 
 $$
