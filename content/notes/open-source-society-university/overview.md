@@ -708,27 +708,16 @@ public class Application{
 	public static void main(String[] args){
 
 		student = new Student("Harry", "Gryffindor");
-		sword = new Sword("Godric Gryffindor's Sword", new Vector3(34,2560,64));
-		hat = new Hat("Sorting Hat", new Vector3(50,-300,140));
+		sword = new Sword("Godric Gryffindor's Sword",{34,2560,64},"Idle");
+		hat = new Hat("Sorting Hat", {50,-300,140});
 
 		if (student.house == "Gryffindor"){
-			sword.position = hat.position - new Vector3(0.3,0,0.5);
-			sword::Materialize();
+		
+			sword.position[0] = hat.position[0] + 0.03;
+			sword.position[1] = hat.position[1] + 0;
+			sword.position[2] = hat.position[2] - 0.05;
+			sword::Materialize;
 		}
-	}
-}
-
-//vector3.java
-public class Vector3{
-
-	private double x;
-	private double y;
-	private double z;
-
-	public Vector3(double xVector, double yVector, double zVector){
-		x = xVector;
-		y = yVector;
-		z = zVector;
 	}
 }
 
@@ -748,11 +737,11 @@ public class Student{
 public class Hat{
 
 	private String name;
-	private Class className;
+	private int[] position;
 
-	public Hat(String hatName, Class hatPosition){
+	public Hat(String hatName, int[] hatPosition){
 		name = hatName;
-		className = hatPosition;
+		position = hatPosition;
 	}
 }
 
@@ -760,17 +749,24 @@ public class Hat{
 public class Sword{
 
 	private String name;
-	private Class className;
+	private int[] position;
+	private String state
 
-	public Sword(String swordName, Class swordPosition){
+	public Sword(String swordName, int[] swordPosition, String swordState){
 		sword = swordName;
-		className = swordPosition;
+		position = swordPosition;
+		state = swordState;
 	}
 
-	public void Materialize(object){
-		object.tangible = true;
+	public void Materialize(){
+		this.state = "Active";
+		System.out.println("A gleaming silver sword had appeared inside the hat, its handle glittering with rubies the size of eggs.)
 	}
 }
+```
+
+```java
+sword.position = new Vector3(x,y,z)
 ```
 
 where position is our variable (which is a property of an instance of the Sword class, which we are accessing with the dot operator), assigned the value (```=```) of an instance(```new```) of a vector3 class(```Vector3```) with arguments x y z (*e.g*, ```10.4,50.3,40.5```)
