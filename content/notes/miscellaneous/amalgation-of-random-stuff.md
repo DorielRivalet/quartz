@@ -12,6 +12,16 @@ organize this raw data and put them into other folders
 
 levels of explanation
 
+combinatorics
+
+halting problem
+
+p vs np
+
+
+
+luatex https://es.overleaf.com/learn/latex/Articles/An_Introduction_to_LuaTeX_(Part_1)%3A_What_is_it%E2%80%94and_what_makes_it_so_different%3F also explains apis
+
 logpoints
 
 heroku netlify

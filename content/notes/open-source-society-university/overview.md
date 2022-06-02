@@ -420,13 +420,12 @@ console.log(action); //its not raining
 ```
 
 $$
-y = f(a,b,c) = \left\{
-        \begin{array}{ll}
-            b & \quad a = 1\\
-            c & \quad a = 0
-        \end{array}
-    \right.
+y = f(a,b,c) = \begin{cases} 
+    b & \quad a = 1\\
+    c & \quad a = 0
+\end{cases}
 $$
+
 
 ## Iterated Multiplication
 
