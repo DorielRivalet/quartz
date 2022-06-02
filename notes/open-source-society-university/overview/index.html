@@ -5,7 +5,7 @@ Content Preface This article will be updated occasionally, as my own understandi
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
 <script src=https://dorielrivalet.github.io/quartz/js/popover.688c5dcb89a57776d7f1cbeaf6f7c44b.min.js></script>
-<script>const BASE_URL="https://dorielrivalet.github.io/quartz/",fetchData=Promise.all([fetch("https://dorielrivalet.github.io/quartz/indices/linkIndex.dd4e832e3724ee050a75d50b0621bd99.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dorielrivalet.github.io/quartz/indices/contentIndex.208d15d8f215cd48decbbd6b08d1c6b4.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),draw=()=>{const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(draw);e.textContent="",drawGraph("https://dorielrivalet.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0),initPopover("https://dorielrivalet.github.io/quartz",!0,!0),renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
+<script>const BASE_URL="https://dorielrivalet.github.io/quartz/",fetchData=Promise.all([fetch("https://dorielrivalet.github.io/quartz/indices/linkIndex.dd4e832e3724ee050a75d50b0621bd99.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dorielrivalet.github.io/quartz/indices/contentIndex.b880e052fb7b686410994b4dff50f132.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),draw=()=>{const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(draw);e.textContent="",drawGraph("https://dorielrivalet.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0),initPopover("https://dorielrivalet.github.io/quartz",!0,!0),renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
     import { attachSPARouting } from "https:\/\/dorielrivalet.github.io\/quartz\/js\/router.9a6d7a1d38ca8b3310438bee1998ae15.min.js"
     attachSPARouting(draw)
   </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
@@ -110,11 +110,7 @@ $$</p><p>whats the data type we are currently dealing with? integers</p><p>10 is
 </span></span><span class=line><span class=cl><span class=k>end</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=n>ourBinaryOperator</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=mi>1</span><span class=p>)</span> <span class=c1>#returns 1</span>
-</span></span></code></pre></td></tr></table></div></div><p>$$ y = f(a,b) = \left{
-\begin{array}{ll}
-1 & a = 1 \text{ and} , b=1 \\0 & a = 0 \text{ or} ,b=0
-\end{array}
-\right. $$</p><p>Let&rsquo;s call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.</p><p>$$A\land B$$</p><p>$$A,. B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013242.png" title="/quartz/notes/images/Pasted image 20220601013242.png"></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></span></code></pre></td></tr></table></div></div><p><img src="/quartz/notes/images/Pasted image 20220602024102.png" title="/quartz/notes/images/Pasted image 20220602024102.png"></p><p>Let&rsquo;s call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.</p><p>$$A\land B$$</p><p>$$A,. B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013242.png" title="/quartz/notes/images/Pasted image 20220601013242.png"></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -130,12 +126,7 @@ $$</p><p>whats the data type we are currently dealing with? integers</p><p>10 is
 </span></span><span class=line><span class=cl><span class=k>end</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=n>ourBinaryOperator</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=mi>0</span><span class=p>)</span> <span class=c1>#returns 1</span>
-</span></span></code></pre></td></tr></table></div></div><p>$$
-y = f(a,b) = \cases{
-1 & $a=1\text{ or }b=1$ \cr
-0 & $a=0\text{ and }b=0$
-}
-$$</p><p>$$A\lor B$$</p><p>$$A+B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013257.png" title="/quartz/notes/images/Pasted image 20220601013257.png"></p><p>And thus we can infer:</p><p>$$\overline{A\land B}=\overline A \lor\overline B$$</p><p>$$\overline{A\lor B}=\overline A \land\overline B$$</p><p>The rules can be expressed in English as:</p><ul><li>The negation of a disjunction is the conjunction of the negations</li><li>The negation of a conjunction is the disjunction of the negations</li></ul><p>or</p><ul><li>The 
+</span></span></code></pre></td></tr></table></div></div><p><img src="/quartz/notes/images/Pasted image 20220602024206.png" title="/quartz/notes/images/Pasted image 20220602024206.png"></p><p>$$A\lor B$$</p><p>$$A+B$$</p><p><img src="/quartz/notes/images/Pasted image 20220601013257.png" title="/quartz/notes/images/Pasted image 20220601013257.png"></p><p>And thus we can infer:</p><p>$$\overline{A\land B}=\overline A \lor\overline B$$</p><p>$$\overline{A\lor B}=\overline A \land\overline B$$</p><p>The rules can be expressed in English as:</p><ul><li>The negation of a disjunction is the conjunction of the negations</li><li>The negation of a conjunction is the disjunction of the negations</li></ul><p>or</p><ul><li>The 
 <a href=https://en.wikipedia.org/wiki/Complement_%28set_theory%29 rel=noopener>complement</a> of the union of two sets is the same as the intersection of their complements</li><li>The complement of the intersection of two sets is the same as the union of their complements</li></ul><p>or</p><ul><li>not (A or B) = (not A) and (not B)</li><li>not (A and B) = (not A) or (not B),</li></ul><p>where &ldquo;A or B&rdquo; is an &ldquo;
 <a href=https://en.wikipedia.org/wiki/Inclusive_or rel=noopener>inclusive or</a>&rdquo; meaning <em>at least</em> one of A or B rather than an &ldquo;
 <a href=https://en.wikipedia.org/wiki/Exclusive_or rel=noopener>exclusive or</a>&rdquo; that means <em>exactly</em> one of A or B.</p><p>In 
@@ -166,8 +157,7 @@ they would take 3 inputs as arguments.</p><div class=highlight><div class=chroma
 </span></span></span></code></pre></td></tr></table></div></div><p>$$
 y = f(a,b,c) = \left{
 \begin{array}{ll}
-b & \quad a = 1\
-c & \quad a = 0
+b & \quad a = 1\\c & \quad a = 0
 \end{array}
 \right.
 $$</p><a href=#iterated-multiplication><h2 id=iterated-multiplication><span class=hanchor arialabel=Anchor># </span>Iterated Multiplication</h2></a><p>now then, what if we want to represent multiple multiplications in a more succinct way?</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -237,8 +227,7 @@ $$</p><a href=#iterated-multiplication><h2 id=iterated-multiplication><span clas
 </span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>multipleExponentiation</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span><span class=mi>2</span><span class=p>,</span><span class=mi>4</span><span class=p>))</span>
 </span></span></code></pre></td></tr></table></div></div><p>$$
 \begin{bmatrix}
--5 & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5\
-pentaLogarithm||pentaRoot & superRoot||superLogarithm & logarithm||root & division & subtract & succesor & addition & multiplication & exponentiation & tetration & pentation
+-5 & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5\\pentaLogarithm||pentaRoot & superRoot||superLogarithm & logarithm||root & division & subtract & succesor & addition & multiplication & exponentiation & tetration & pentation
 \end{bmatrix}
 $$</p><p>Successor is doing a+1, addition is doing a+b</p><p>Down arrow notation can be used to denote a logarithmic-type inverse of the up-arrow notation</p><a href=#space--time><h2 id=space--time><span class=hanchor arialabel=Anchor># </span>Space === Time?</h2></a><p>we used nested <code>for</code> loops in a program to write nested exponentiation, also called a tower of powers.</p><p>the act of running the above program is an event. an event can have two properties: the time that it happened and the space it happened at.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
