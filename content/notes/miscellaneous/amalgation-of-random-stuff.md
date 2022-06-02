@@ -12,6 +12,10 @@ organize this raw data and put them into other folders
 
 levels of explanation
 
+logpoints
+
+heroku netlify
+
 Memoization
 
 scalar vector matrix

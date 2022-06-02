@@ -1,26 +1,35 @@
 ---
-title: "miscellaneous"
-date: "2022-05-30 22:20"
+title: "health"
+date: "2022-06-02 07:41"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- list
+- health
 - miscellaneous
 ---
 
-- [miscellaneous](../../tags/miscellaneous)
-- [health](notes/miscellaneous/health.md)
+# Metadata
+2022-06-02 07:41  | health | [Doriel Rivalet](https://github.com/DorielRivalet)
 
+# Content
+- Don't
+	- [Smoke](https://youtu.be/lCYfvWnDMd8?t=63)
+	- Abuse alcohol
+	- Consume too much sugar/salt
 
-![[notes/images/Pasted image 20220530225258.png]]
+- Do
+	- Exercise
+	- Eat healthy
+	- Check blood pressure
+	- Drink safe water
+	- Reach out when needed
 
-*[Artist: Hidari](https://en.wikipedia.org/wiki/Hidari_(illustrator))*
+# Sources
+Own notes
 
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
 - [All Notes](notes/)
-- [All Tags](../../tags/)
-- [miscellaneous-related Notes](../../tags/miscellaneous)
 
 ## Knowledge Index
 - [The Odin Project](notes/index-list/the-odin-project.md)
@@ -28,6 +37,4 @@ If you prefer browsing the contents of this site through a list instead of a gra
 - [Full Stack Open](notes/index-list/fullstack-open.md)
 - [Miscellaneous](notes/index-list/miscellaneous.md)
 - [Quartz](notes/index-list/quartz.md)
-
-
 

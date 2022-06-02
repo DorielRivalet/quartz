@@ -1,26 +1,33 @@
 ---
-title: "miscellaneous"
-date: "2022-05-30 22:20"
+title: "debugging"
+date: "2022-06-02 03:27"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
-- list
-- miscellaneous
+- ruby
+- the-odin-project
+- debugging
+- repl
 ---
 
-- [miscellaneous](../../tags/miscellaneous)
-- [health](notes/miscellaneous/health.md)
+# Metadata
+2022-06-02 03:27  | debugging | [Doriel Rivalet](https://github.com/DorielRivalet)
+
+# Content
+repl stands for read evaluation print loop
+
+examples are irb and pry
+
+adding a `binding.pry` line in our code is similar to creating a breakpoint in JavaScript.
 
 
-![[notes/images/Pasted image 20220530225258.png]]
 
-*[Artist: Hidari](https://en.wikipedia.org/wiki/Hidari_(illustrator))*
+# Sources
+Own notes
 
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
 - [All Notes](notes/)
-- [All Tags](../../tags/)
-- [miscellaneous-related Notes](../../tags/miscellaneous)
 
 ## Knowledge Index
 - [The Odin Project](notes/index-list/the-odin-project.md)
@@ -28,6 +35,4 @@ If you prefer browsing the contents of this site through a list instead of a gra
 - [Full Stack Open](notes/index-list/fullstack-open.md)
 - [Miscellaneous](notes/index-list/miscellaneous.md)
 - [Quartz](notes/index-list/quartz.md)
-
-
 

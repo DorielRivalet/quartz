@@ -44,11 +44,11 @@ This article will be updated occasionally, as my own understanding of math and p
 
 Let's start with nothing
 
-how can we represent nothing?
+How can we represent nothing?
 
-well u could use the symbol 0, from the arabic numberals
+Well, you could use the symbol 0, from the arabic numerals.
 
-or when talking about sets, u have the empty set {}
+or when talking about sets, you have the empty set {}
 
 lemme grab a LaTeX cheatsheet since i never wrote in math notation in markdown before
 
@@ -104,12 +104,14 @@ so now we have the unary operator.
 $$-1 = -(1)$$
 $$-(-1) = 1$$
 ```ruby
+#notGate.rb
 a = false
 a = not a
 puts a #true
 ```
 
 ```javascript
+//notGate.js
 let a = false
 console.log(!a) //true
 a = !a
@@ -121,7 +123,7 @@ console.log(!a) //false
 if we look at one of our hands, we should have 5 fingers. how do we know that we have 5? whats the action that we did to determine that value? counting.
 
 ```python
-
+#counting.py
 fingersOnHand = 5
 
 def countFingersOnHand:
@@ -423,7 +425,7 @@ $$
 now then, what if we want to represent multiple multiplications in a more succinct way?
 
 ```lua
---exponentiation?
+--exponentiation.lua
 print(2*2*2*2*2*2)
 ```
 
@@ -434,6 +436,7 @@ let's define a function that does that:
 $$g(num2) = f(num1) * f(num1) * ... num2 times$$
 
 ```cpp
+#exponentiation.cpp
 #include <iostream>
 
 int multipleMultiplication(int num,int exponent){
@@ -533,7 +536,7 @@ the act of running the above program is an event. an event can have two properti
 const program = document.querySelector(".programResult")
 
 function printProperties(){
-	print(`time: ${this.time}, space: ${this.space}`)
+	console.log(`time: ${this.time}, space: ${this.space}`)
 }
 
 program.addEventListener("computed",printProperties)
@@ -541,6 +544,7 @@ program.addEventListener("computed",printProperties)
 
 
 ```lua
+--event.lua
 local event = {}
 event.position = [1.35,453,36.5]
 event.time = "03:46:50.103"
@@ -680,9 +684,77 @@ so we need a j unit? well...
 we actually need 4 dimensional numbers.
 
 notice how in positions of for example video-game objects, those are defined as 
-```text
-sword = new Sword("Excalibur");
-sword.position = new Vector3(x,y,z);
+
+```java
+//application.java
+public class Application{
+
+	public static void main(String[] args){
+
+		student = new Student("Harry", "Gryffindor");
+		sword = new Sword("Godric Gryffindor's Sword", new Vector3(34,2560,64));
+		hat = new Hat("Sorting Hat", new Vector3(50,-300,140));
+
+		if (student.house == "Gryffindor"){
+			sword.position = hat.position - new Vector3(0.3,0,0.5);
+			sword::Materialize();
+		}
+	}
+}
+
+//vector3.java
+public class Vector3{
+
+	private double x;
+	private double y;
+	private double z;
+
+	public Vector3(double xVector, double yVector, double zVector){
+		x = xVector;
+		y = yVector;
+		z = zVector;
+	}
+}
+
+//student.java
+public class Student{
+
+	private String name;
+	private String house;
+
+	public Student(String swordName, String houseName){
+		name = swordName;
+		house = houseName;
+	}
+}
+
+//hat.java
+public class Hat{
+
+	private String name;
+	private Class className;
+
+	public Hat(String hatName, Class hatPosition){
+		name = hatName;
+		className = hatPosition;
+	}
+}
+
+//sword.java
+public class Sword{
+
+	private String name;
+	private Class className;
+
+	public Sword(String swordName, Class swordPosition){
+		sword = swordName;
+		className = swordPosition;
+	}
+
+	public void Materialize(object){
+		object.tangible = true;
+	}
+}
 ```
 
 where position is our variable (which is a property of an instance of the Sword class, which we are accessing with the dot operator), assigned the value (```=```) of an instance(```new```) of a vector3 class(```Vector3```) with arguments x y z (*e.g*, ```10.4,50.3,40.5```)
