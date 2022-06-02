@@ -339,14 +339,14 @@ end
 puts ourBinaryOperator(1,0) #returns 1
 ```
 
+
 $$
-y = f(a,b) = \left\{
-        \begin{array}{ll}
-            1 & \quad a = 1 \text{ or} \, b=1 \\
-            0 & \quad a = 0 \text{ and} \,b=0
-        \end{array}
-    \right.
+y = f(a,b) = \cases{
+	1 & $a=1\text{ or }b=1$ \cr
+	0 & $a=0\text{ and }b=0$ 
+}
 $$
+
 
 $$A\lor B$$
 
