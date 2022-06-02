@@ -20,10 +20,12 @@ tags:
 - lua
 - cpp
 - python
+- java
 - abstraction
 - physics
 - mathematical-duality
 - set-theory
+- latex
 ---
 
 
@@ -64,7 +66,7 @@ nil
 null
 ```
 
-```
+```python
 false
 ```
 
