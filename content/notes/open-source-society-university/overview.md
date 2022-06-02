@@ -199,8 +199,8 @@ how do we represent an unit of information?
 
 lets allocate 1 byte:
 
-```
-ourMemory = 00000000
+```lua
+local ourMemory = 00000000
 ```
 
 so now we can currently go from 0 to 15, but what if we want to go from -7 to 7?
@@ -238,12 +238,14 @@ lets define a function that does that
 $$f(num) = num+num+num+num+num+num+num+num+num+num$$
 
 ```ruby
-
-def multipleAddition(num)
-  puts num.times { |i| print i, " "}
+#multipleAddition.rb
+def multipleAddition(input)
+  result = input.times{|i| i+1}
+  puts result
 end
 
-multipleAddition(10)
+num = 10
+multipleAddition(num)
 ```
 
 what is num? it stands for number. its a variable.  a mathematical variable may represent a [number](https://en.wikipedia.org/wiki/Number "Number"), a [vector](https://en.wikipedia.org/wiki/Vector_(mathematics) "Vector (mathematics)"), a [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics) "Matrix (mathematics)"), a [function](https://en.wikipedia.org/wiki/Function_(mathematics) "Function (mathematics)"), the [argument of a function](https://en.wikipedia.org/wiki/Argument_of_a_function "Argument of a function"), a [set](https://en.wikipedia.org/wiki/Set_(mathematics) "Set (mathematics)"), or an [element](https://en.wikipedia.org/wiki/Element_(mathematics) "Element (mathematics)") of a set; the same way the value of a hash in programming can be a number, a string, an array, or even another hash. 
@@ -395,7 +397,11 @@ where
 -   _P_ and _Q are propositions,_
 -   $$\neg$$ is the negation logic operator (NOT),
 -   $$\land$$ is the conjunction logic operator (AND),
--     $$\lor$$ is the disjunction logic operator (OR),
+ 
+- 
+$$\lor$$
+
+ is the disjunction logic operator (OR),
 -   $$\iff$$ is a [metalogical](https://en.wikipedia.org/wiki/Metalogic "Metalogic") symbol meaning "can be replaced in a [logical proof](https://en.wikipedia.org/wiki/Formal_proof "Formal proof") with".
 
 ## Ternary Operation
@@ -406,7 +412,7 @@ they would take 3 inputs as arguments.
 let isRaining = false;
 
 function grabCoat(){
-	console.log("Grab coat!")
+	console.log("Grab coat!");
 }
 
 let action = isRaining ? grabCoat() : "It's not raining";
@@ -428,7 +434,8 @@ now then, what if we want to represent multiple multiplications in a more succin
 
 ```lua
 --exponentiation.lua
-print(2*2*2*2*2*2)
+local num1 = 2
+print(num1*num1*num1*num1*num1*num1)
 ```
 
 imagine i wanted to type the above code, but instead of printing 64 by doing 5 operations, i wanted to do it in 1 operation.
@@ -503,6 +510,8 @@ $$2\uparrow\uparrow4 = 2^{2^{2^{2}}} = 2^{16} = 65536 = 0x10000 = 0b100000000000
 
 tetration: (tetra comes from four, the same way penta comes from five). now we found a pattern: hexa means six, that means hexation would be whats after pentation, and so on. but lets just stick with explaining tetration for now.
 
+lets use nested ```for``` loops in a program to write nested exponentiation (also called a tower of powers).
+
 ```javascript
 function multipleExponentiation(num, arrows, num2){
   let accumulator = num;
@@ -530,8 +539,6 @@ Down arrow notation can be used to denote a logarithmic-type inverse of the up-a
 
 ## Space === Time?
 
-we used nested ```for``` loops in a program to write nested exponentiation, also called a tower of powers.
-
 the act of running the above program is an event. an event can have two properties: the time that it happened and the space it happened at.
 
 ```javascript
@@ -546,11 +553,12 @@ program.addEventListener("computed",printProperties)
 
 
 ```lua
---event.lua
-local event = {}
-event.position = [1.35,453,36.5]
-event.time = "03:46:50.103"
-print("result: "..event.position[0]..","..event.position[1]...","...event.position[2].." "..event["time"]) -- result: 1.35,453,36.5 03:46:50.103
+--birthdayEvent.lua
+local birthdayEvent = {}
+birthdayEvent.position = [1.35,453,36.5]
+birthdayEvent.time = "03:46:50.103"
+
+print("result: "..birthdayEvent.position[0]..","..birthdayEvent.position[1]...","...birthdayEvent.position[2].." "..birthdayEvent["time"]) -- result: 1.35,453,36.5 03:46:50.103
 ```
 
 if we want to know for how long this program is going to run, meaning the time complexity of the algorithm, we can use big O notation.
@@ -595,7 +603,7 @@ console.log(typeof(2)) //number
 
 so we put 3 arguments into the multipleExponentiation function, those 3 arguments are the same data type: number.
 
-if we go to the [JavaScript docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures), we see that the *number* data type occupies 8 bytes (64 bits).
+if we go to the [JavaScript docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)(the programming language's documentation), we see that the *number* data type occupies 8 bytes (64 bits).
 
 ```javascript
 function multipleExponentiation(num, arrows, num2){ //8 bytes*3=24 bytes
@@ -630,7 +638,7 @@ but why is -2 times -2 equal to 4?
 
 lets review our current set of numbers:
 
-$${-1,-0.65345346,0,1,3.1415}$$
+$${...-59999,-1,-0.653,0,1,2.71828,3.1415,...}$$
 
 if we multiply positive with positive, we go to the right of the number line
 
@@ -641,6 +649,12 @@ if we multiply negative with negative, you change direction twice, so you end up
 or explained in another way, multiplying by negative is a 180 degrees rotation, which is also 1pi radian
 
 if u do 180 twice u do a full rotation, and thus, go in the same direction. a 360degrees rotation, or 2pi radian
+
+$$1\pi = 180\degree$$
+
+$$2\pi = 180\degree*2 = 360\degree$$
+
+
 
 ![[notes/images/Pasted image 20220528204454.png]]
 
