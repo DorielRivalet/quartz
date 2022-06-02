@@ -313,14 +313,12 @@ end
 puts ourBinaryOperator(1,1) #returns 1
 ```
 
-$$
-y = f(a,b) = \left\{
-        \begin{array}{ll}
-            1 & \quad a = 1 \text{ and} \, b=1 \\
-            0 & \quad a = 0 \text{ or} \,b=0
-        \end{array}
-    \right.
-$$
+$$ y = f(a,b) = \left\{
+\begin{array}{ll}
+    1 & a = 1 \text{ and} \, b=1 \\
+     0 & a = 0 \text{ or} \,b=0
+\end{array}
+\right.  $$
 
 Let's call the logic gate that returns 1 when both values are 1, the AND gate; and the logic gate that returns 1 when either value is 1, the OR gate.
 
