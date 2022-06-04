@@ -14,6 +14,7 @@ tags:
 The **do** is optional in a for loop in Ruby and may cause issues if used in IRB
 
 | block variable |
+
 This is the element from your array that the block is currently iterating over. You can use any variable name that you find helpful here
 
 For multi-line blocks, the commonly accepted best practice is to change up the syntax to use `do...end` instead of `{...}`:
