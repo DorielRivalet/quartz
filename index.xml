@@ -11,7 +11,8 @@ metaprogramming
 combinatorics
 halting problem
 p vs np</description></item><item><title>basic-enumerable-methods</title><link>https://dorielrivalet.github.io/quartz/notes/the-odin-project/ruby/basic-enumerable-methods/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/the-odin-project/ruby/basic-enumerable-methods/</guid><description>Metadata 2022-06-03 18:42 | basic-enumerable-methods | Doriel Rivalet
-Content The do is optional in a for loop in Ruby and may cause issues if used in IRB</description></item><item><title>braindump</title><link>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</guid><description>encryption-decryption: XOR&amp;rsquo;ed, obfuscation, steganography, deobfuscator
+Content The do is optional in a for loop in Ruby and may cause issues if used in IRB</description></item><item><title>bitfields</title><link>https://dorielrivalet.github.io/quartz/notes/open-source-society-university/bitfields/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/open-source-society-university/bitfields/</guid><description>Metadata 2022-06-04 18:04 | bitfields | Doriel Rivalet
+Content bitfields can be 4 or 8 bytes and composed of many flags</description></item><item><title>braindump</title><link>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dorielrivalet.github.io/quartz/notes/miscellaneous/braindump-2/</guid><description>encryption-decryption: XOR&amp;rsquo;ed, obfuscation, steganography, deobfuscator
 logic gates
 NAND gates
 u can make anything with just nand
