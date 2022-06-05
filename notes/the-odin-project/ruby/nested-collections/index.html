@@ -1,0 +1,199 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Metadata 2022-06-04 18:50 | nested-collections | Doriel Rivalet
+Content use #dig to about errors when indexing arrays/hashes
+This first example uses the second optional argument for the default value."><title>nested-collections</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://dorielrivalet.github.io/quartz//icon.png><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet><link href=https://dorielrivalet.github.io/quartz/styles.8010c0d8fb32a34f00886b05df3d230c.min.css rel=stylesheet><script src=https://dorielrivalet.github.io/quartz/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script src=https://dorielrivalet.github.io/quartz/js/popover.688c5dcb89a57776d7f1cbeaf6f7c44b.min.js></script>
+<script>const BASE_URL="https://dorielrivalet.github.io/quartz/",fetchData=Promise.all([fetch("https://dorielrivalet.github.io/quartz/indices/linkIndex.e1e3d35db1c851940074494b5e526cb2.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dorielrivalet.github.io/quartz/indices/contentIndex.431a7cd81a73d07e5cd76109b804c883.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),draw=()=>{const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(draw);e.textContent="",drawGraph("https://dorielrivalet.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0),initPopover("https://dorielrivalet.github.io/quartz",!0,!0),renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/dorielrivalet.github.io\/quartz\/js\/router.9a6d7a1d38ca8b3310438bee1998ae15.min.js"
+    attachSPARouting(draw)
+  </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XYFD95KB4J",{anonymize_ip:!1})}</script><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://dorielrivalet.github.io/quartz/js/search.1d58f2d3eaac68cc50beeb118d91edc9.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://dorielrivalet.github.io/quartz/>Patchouli's Computatrunomicon</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg><div class=spacer></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>nested-collections</h1><p class=meta>Last updated June 5, 2022</p><ul class=tags><li><a href=https://dorielrivalet.github.io/quartz/tags/ruby/>Ruby</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/the-odin-project/>The odin project</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/nesting/>Nesting</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/arrays/>Arrays</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/hashes/>Hashes</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/iteration/>Iteration</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#removing-elements-from-a-hash>Removing elements from a hash</a></li><li><a href=#adding-elements-to-a-hash>Adding elements to a hash</a></li></ol><ol><li><a href=#knowledge-index>Knowledge Index</a></li></ol></nav></details></aside><a href=#metadata><h1 id=metadata><span class=hanchor arialabel=Anchor># </span>Metadata</h1></a><p>2022-06-04 18:50 | nested-collections |
+<a href=https://github.com/DorielRivalet rel=noopener>Doriel Rivalet</a></p><a href=#content><h1 id=content><span class=hanchor arialabel=Anchor># </span>Content</h1></a><p>use #dig to about errors when indexing arrays/hashes</p><p>This first example uses the second optional argument for the default value.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>mutable</span> <span class=o>=</span> <span class=nb>Array</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nb>Array</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=mi>2</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; [[nil, nil], [nil, nil], [nil, nil]]</span>
+</span></span><span class=line><span class=cl><span class=n>mutable</span><span class=o>[</span><span class=mi>0</span><span class=o>][</span><span class=mi>0</span><span class=o>]</span> <span class=o>=</span> <span class=mi>1000</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; 1000</span>
+</span></span><span class=line><span class=cl><span class=n>mutable</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; [[1000, nil], [1000, nil], [1000, nil]]</span>
+</span></span></code></pre></td></tr></table></div></div><p>Changing the value of the first element in the first nested array, causes the first element to change in all three nested arrays! This same behavior will happen with strings, hashes, or any other mutable objects.</p><p>Now, let’s take a look at an example that omits the second optional argument and instead passes in the mutable value in a block.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>immutable</span> <span class=o>=</span> <span class=nb>Array</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=mi>3</span><span class=p>)</span> <span class=p>{</span> <span class=nb>Array</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=mi>2</span><span class=p>)</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; [[nil, nil], [nil, nil], [nil, nil]]</span>
+</span></span><span class=line><span class=cl><span class=n>immutable</span><span class=o>[</span><span class=mi>0</span><span class=o>][</span><span class=mi>0</span><span class=o>]</span> <span class=o>=</span> <span class=mi>1000</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; 1000</span>
+</span></span><span class=line><span class=cl><span class=n>immutable</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; [[1000, nil], [nil, nil], [nil, nil]]</span>
+</span></span></code></pre></td></tr></table></div></div><p>Changing the value of the first element in the first nested array does not cause the value to change in any other nested array.</p><p>if any student scored higher than 80 on everything.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>test_scores</span> <span class=o>=</span> <span class=o>[[</span><span class=mi>97</span><span class=p>,</span> <span class=mi>76</span><span class=p>,</span> <span class=mi>79</span><span class=p>,</span> <span class=mi>93</span><span class=o>]</span><span class=p>,</span> <span class=o>[</span><span class=mi>79</span><span class=p>,</span> <span class=mi>84</span><span class=p>,</span> <span class=mi>76</span><span class=p>,</span> <span class=mi>79</span><span class=o>]</span><span class=p>,</span> <span class=o>[</span><span class=mi>88</span><span class=p>,</span> <span class=mi>67</span><span class=p>,</span> <span class=mi>64</span><span class=p>,</span> <span class=mi>76</span><span class=o>]</span><span class=p>,</span> <span class=o>[</span><span class=mi>94</span><span class=p>,</span> <span class=mi>55</span><span class=p>,</span> <span class=mi>67</span><span class=p>,</span> <span class=mi>81</span><span class=o>]]</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; [[97, 76, 79, 93], [79, 84, 76, 79], [88, 67, 64, 76], [94, 55, 67, 81]]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>test_scores</span><span class=o>.</span><span class=n>any?</span> <span class=k>do</span> <span class=o>|</span><span class=n>scores</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>scores</span><span class=o>.</span><span class=n>all?</span> <span class=p>{</span> <span class=o>|</span><span class=n>score</span><span class=o>|</span> <span class=n>score</span> <span class=o>&gt;</span> <span class=mi>80</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; false</span>
+</span></span></code></pre></td></tr></table></div></div><p>What do you think will happen if we switch <code>#any?</code> and <code>#all?</code>? Do you think we will get the same results?</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>test_scores</span><span class=o>.</span><span class=n>all?</span> <span class=k>do</span> <span class=o>|</span><span class=n>scores</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>scores</span><span class=o>.</span><span class=n>any?</span> <span class=p>{</span> <span class=o>|</span><span class=n>score</span><span class=o>|</span> <span class=n>score</span> <span class=o>&gt;</span> <span class=mi>80</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; true</span>
+</span></span></code></pre></td></tr></table></div></div><p>The results are different, because now it is determining if <strong>all</strong> of the nested arrays contain <strong>any</strong> number over 80. This returns true, because each of the nested arrays have at least one number over 80.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>vehicles</span><span class=o>.</span><span class=n>filter_map</span> <span class=p>{</span> <span class=o>|</span><span class=nb>name</span><span class=p>,</span> <span class=n>data</span><span class=o>|</span> <span class=nb>name</span> <span class=k>if</span> <span class=n>data</span><span class=o>[</span><span class=ss>:year</span><span class=o>]</span> <span class=o>&gt;=</span> <span class=mi>2020</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; [:caleb, :dave]</span>
+</span></span></code></pre></td></tr></table></div></div><p><code>#select, #filter, #collect/map, #compact</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>contacts</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>person</span><span class=p>,</span> <span class=n>data</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=c1>#at this level, &#34;person&#34; is Jon Snow or Freddy Mercury and &#34;data&#34; is a hash of</span>
+</span></span><span class=line><span class=cl>  <span class=c1>#key/value pairs to iterate over the &#34;data&#34; hash, we can use the following line:</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=n>data</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>attribute</span><span class=p>,</span> <span class=n>value</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>    <span class=nb>puts</span> <span class=s2>&#34;</span><span class=si>#{</span><span class=n>attribute</span><span class=si>}</span><span class=s2>: </span><span class=si>#{</span><span class=n>value</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>contacts.each do |person, data|
+</span></span><span class=line><span class=cl>  #at this level, &#34;person&#34; is Jon Snow or Freddy and &#34;data&#34; is a hash of
+</span></span><span class=line><span class=cl>  #key/value pairs to iterate over the &#34;data&#34; hash, we can use the following
+</span></span><span class=line><span class=cl>  #line:
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  data.each do |attribute, value|
+</span></span><span class=line><span class=cl>    #at this level, &#34;attribute&#34; describes the key of :name, :email,
+</span></span><span class=line><span class=cl>    #:favorite_ice_cream_flavors, or :knows we need to first check and see if
+</span></span><span class=line><span class=cl>    #the key is :favorite_ice_cream_flavors, if it is, that means the VALUE is
+</span></span><span class=line><span class=cl>    #an array that we can iterate over to print out each element
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    if attribute == :favorite_ice_cream_flavors
+</span></span><span class=line><span class=cl>      value.each do |flavor|
+</span></span><span class=line><span class=cl>        # here, each index element in an ice cream flavor string
+</span></span><span class=line><span class=cl>        puts &#34;#{flavor}&#34;
+</span></span><span class=line><span class=cl>      end
+</span></span><span class=line><span class=cl>    end
+</span></span><span class=line><span class=cl>  end
+</span></span><span class=line><span class=cl>end
+</span></span></code></pre></td></tr></table></div></div><p>Ruby provides a couple of tools to help us comprehend arrays, hashes, and nested mixtures of both.</p><p>Assuming your data looks like this (I&rsquo;ve added quotes around <code>GOOG</code> and <code>FB</code>):</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>data</span> <span class=o>=</span> <span class=o>[</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span><span class=s2>&#34;id&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;1&#34;</span><span class=p>,</span> <span class=s2>&#34;properties&#34;</span><span class=o>=&gt;</span><span class=p>{</span><span class=s2>&#34;name&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;Google&#34;</span><span class=p>,</span> <span class=s2>&#34;stock_symbol&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;GOOG&#34;</span><span class=p>,</span> <span class=s2>&#34;primary_role&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;company&#34;</span><span class=p>}},</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span><span class=s2>&#34;id&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;2&#34;</span><span class=p>,</span> <span class=s2>&#34;properties&#34;</span><span class=o>=&gt;</span><span class=p>{</span><span class=s2>&#34;name&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;Facebook&#34;</span><span class=p>,</span> <span class=s2>&#34;stock_symbol&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;FB&#34;</span><span class=p>,</span> <span class=s2>&#34;primary_role&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;company&#34;</span><span class=p>}}</span>
+</span></span><span class=line><span class=cl><span class=o>]</span>
+</span></span></code></pre></td></tr></table></div></div><p>You can iterate over the array using 
+<a href=http://ruby-doc.org/core-2.5.1/Array.html#method-i-each rel=noopener><code>each</code></a>, e.g.:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>data</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>result</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=n>result</span><span class=o>[</span><span class=s2>&#34;id&#34;</span><span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>Digging into a hash and printing the result can be done in a couple of ways:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>data</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>result</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=c1># method 1</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=n>result</span><span class=o>[</span><span class=s2>&#34;properties&#34;</span><span class=o>][</span><span class=s2>&#34;name&#34;</span><span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1># method 2  </span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=n>result</span><span class=o>.</span><span class=n>dig</span><span class=p>(</span><span class=s2>&#34;properties&#34;</span><span class=p>,</span> <span class=s2>&#34;name&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>Method #1 uses the 
+<a href=http://ruby-doc.org/core-2.5.1/Hash.html#method-i-5B-5D rel=noopener><code>hash[key]</code></a> syntax, and because the first hash value is another hash, it can be chained to get the result you&rsquo;re after. The drawback of this approach is that if you have a missing <code>properties</code> key on one of your results, you&rsquo;ll get an error.</p><p>Method #2 uses 
+<a href=http://ruby-doc.org/core-2.5.1/Hash.html#method-i-dig rel=noopener><code>dig</code></a>, which accepts the nested keys as arguments (in order). It&rsquo;ll dig down into the nested hashes and pull out the value, but if any step is missing, it will return <code>nil</code> which can be a bit safer if you&rsquo;re handling data from an external source</p><a href=#removing-elements-from-a-hash><h2 id=removing-elements-from-a-hash><span class=hanchor arialabel=Anchor># </span>Removing elements from a hash</h2></a><p>Your second question is a little more involved. You&rsquo;ve got two options:</p><ol><li>Remove the <code>primary_role</code> keys from the nested hashes, or</li><li>Create a new object which contains all the data except the <code>primary_role</code> keys.</li></ol><p>I&rsquo;d generally go for the latter, and recommend reading up on immutability and immutable data structures.</p><p>However, to achieve [1] you can do an in-place 
+<a href=http://ruby-doc.org/core-2.5.1/Hash.html#method-i-delete rel=noopener><code>delete</code></a> of the key:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>data</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>company</span><span class=o>|</span> 
+</span></span><span class=line><span class=cl>  <span class=n>company</span><span class=o>[</span><span class=s2>&#34;properties&#34;</span><span class=o>].</span><span class=n>delete</span><span class=p>(</span><span class=s2>&#34;primary_role&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#adding-elements-to-a-hash><h2 id=adding-elements-to-a-hash><span class=hanchor arialabel=Anchor># </span>Adding elements to a hash</h2></a><p>You assign new hash values simply with 
+<a href=http://ruby-doc.org/core-2.5.1/Hash.html#method-i-5B-5D-3D rel=noopener><code>hash[key] = value</code></a>, so you can set the industry with something like:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>data</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>company</span><span class=o>|</span> 
+</span></span><span class=line><span class=cl>  <span class=n>company</span><span class=o>[</span><span class=s2>&#34;properties&#34;</span><span class=o>][</span><span class=s2>&#34;industry&#34;</span><span class=o>]</span> <span class=o>=</span> <span class=s2>&#34;Advertising/Privacy Invasion&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>which would leave you with something like:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=o>[</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;id&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;1&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;properties&#34;</span><span class=o>=&gt;</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;name&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;Google&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;stock_symbol&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;GOOG&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;industry&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;Advertising/Privacy Invasion&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;id&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;2&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;properties&#34;</span><span class=o>=&gt;</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;name&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;Facebook&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;stock_symbol&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;FB&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;industry&#34;</span><span class=o>=&gt;</span><span class=s2>&#34;Advertising/Privacy Invasion&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=o>]</span>
+</span></span></code></pre></td></tr></table></div></div><p>reminder: switch from <code>if !</code> to <code>unless</code></p><a href=#sources><h1 id=sources><span class=hanchor arialabel=Anchor># </span>Sources</h1></a><p>Own notes</p><p><a href=https://www.theodinproject.com/lessons/ruby-nested-collections rel=noopener>https://www.theodinproject.com/lessons/ruby-nested-collections</a></p><p><a href=https://learn.co/lessons/nested-hash-iteration rel=noopener>https://learn.co/lessons/nested-hash-iteration</a></p><p><a href=https://stackoverflow.com/questions/50529389/manipulating-output-from-an-array-of-nested-hashes-in-ruby rel=noopener>https://stackoverflow.com/questions/50529389/manipulating-output-from-an-array-of-nested-hashes-in-ruby</a></p><a href=#content-lists><h1 id=content-lists><span class=hanchor arialabel=Anchor># </span>Content Lists</h1></a><p>If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:</p><ul><li><a href=/quartz/notes/ rel=noopener class=internal-link data-src=/quartz/notes/>All Notes</a></li></ul><a href=#knowledge-index><h2 id=knowledge-index><span class=hanchor arialabel=Anchor># </span>Knowledge Index</h2></a><ul><li><a href=/quartz/notes/index-list/the-odin-project/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/the-odin-project/>The Odin Project</a></li><li><a href=/quartz/notes/index-list/open-source-society-university/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/open-source-society-university/>Open Source Society University</a></li><li><a href=/quartz/notes/index-list/fullstack-open/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/fullstack-open/>Full Stack Open</a></li><li><a href=/quartz/notes/index-list/miscellaneous/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/miscellaneous/>Miscellaneous</a></li><li><a href=/quartz/notes/index-list/quartz/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/quartz/>Quartz</a></li></ul></article><hr><div class=page-end><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://dorielrivalet.github.io/quartz/js/graph.5388a070919094961d3e5151252e9065.js></script></div></div><div id=contact_buttons><footer><p>Made by Doriel Rivalet using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=/>Home</a></li><li><a href=https://github.com/DorielRivalet>Github</a></li></ul></footer></div></div></body></html>
