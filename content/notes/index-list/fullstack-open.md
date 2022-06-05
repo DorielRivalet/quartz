@@ -10,8 +10,9 @@ tags:
 - [FSO](../../tags/fullstack-open)
 
 
-![[notes/images/Pasted image 20220530225554.png]]
-*Source: https://www.pixiv.net/en/artworks/84629237*
+![[notes/images/Pasted image 20220605033849.png]]
+
+*Source: https://www.pixiv.net/en/artworks/64533951*
 
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:

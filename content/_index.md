@@ -7,6 +7,8 @@ title: Patchouli Computatrum
 
 *"Computers are like humans - they do everything except think." ~ [John](https://www.youtube.com/watch?v=vLbllFHBQM4) [von](https://youtu.be/Ml3-kVYLNr8?t=42) [Neumann](https://www.youtube.com/watch?v=ZRPoEKHXTJg)*
 
+Welcome to my personal knowledge vault! I mostly post computer science related topics.
+
 ## Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 

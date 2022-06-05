@@ -792,6 +792,12 @@ Passing from the reals to the complex numbers, we lose order; going from the com
 
 interesting, isn't it?
 
+![[notes/images/Pasted image 20220605034549.png]]
+
+*Source: https://www.pixiv.net/en/artworks/5929869*
+
+[Check out overview part 2](notes/open-source-society-university/overview2.md)
+
 # Sources
 
 own notes

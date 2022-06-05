@@ -288,3 +288,7 @@ tags:
   	- Workflows
 - Figma
 - Excalidraw
+
+![[notes/images/Pasted image 20220605040238.png]]
+
+*Source: https://www.pixiv.net/en/artworks/36643068*

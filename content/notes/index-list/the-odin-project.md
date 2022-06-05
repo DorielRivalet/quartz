@@ -15,7 +15,10 @@ tags:
 
 - [intermediate html and css]()
 
-[![Example Image](https://github.com/DorielRivalet/quartz/blob/hugo/content/notes/images/Pasted-image-20220530204411.jpg?raw=true)](https://www.pixiv.net/en/artworks/82220608)
+
+![[notes/images/Pasted image 20220605033521.png]]
+
+*Source: https://www.pixiv.net/en/artworks/71062481*
 
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
