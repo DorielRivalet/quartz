@@ -1,0 +1,1305 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Metadata 2022-06-06 01:22 | oop | Doriel Rivalet
+Content lambdas are nameless methods/functions
+another name for properties are attributes
+classes have properties and objects have attributes?"><title>oop</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://dorielrivalet.github.io/quartz//icon.png><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet><link href=https://dorielrivalet.github.io/quartz/styles.8010c0d8fb32a34f00886b05df3d230c.min.css rel=stylesheet><script src=https://dorielrivalet.github.io/quartz/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script src=https://dorielrivalet.github.io/quartz/js/popover.688c5dcb89a57776d7f1cbeaf6f7c44b.min.js></script>
+<script>const BASE_URL="https://dorielrivalet.github.io/quartz/",fetchData=Promise.all([fetch("https://dorielrivalet.github.io/quartz/indices/linkIndex.ecb689f2aa3a080558ba4a6f0e855252.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dorielrivalet.github.io/quartz/indices/contentIndex.35bf36c0f4f393d28630a96b5e12ac51.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),draw=()=>{const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(draw);e.textContent="",drawGraph("https://dorielrivalet.github.io/quartz",[{"/moc":"#4388cc"}],-1,!0,!1,!0),initPopover("https://dorielrivalet.github.io/quartz",!0,!0),renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/dorielrivalet.github.io\/quartz\/js\/router.9a6d7a1d38ca8b3310438bee1998ae15.min.js"
+    attachSPARouting(draw)
+  </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XYFD95KB4J",{anonymize_ip:!1})}</script><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://dorielrivalet.github.io/quartz/js/search.1d58f2d3eaac68cc50beeb118d91edc9.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://dorielrivalet.github.io/quartz/>Patchouli's Computatrunomicon</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg><div class=spacer></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>oop</h1><p class=meta>Last updated June 6, 2022</p><ul class=tags><li><a href=https://dorielrivalet.github.io/quartz/tags/object-oriented-programming/>Object oriented programming</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/the-odin-project/>The odin project</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/ruby/>Ruby</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/mixins/>Mixins</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/inheritance/>Inheritance</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/instance-variables/>Instance variables</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/class-variables/>Class variables</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/global-variables/>Global variables</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/local-variables/>Local variables</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/scope/>Scope</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/methods/>Methods</a></li><li><a href=https://dorielrivalet.github.io/quartz/tags/attributes/>Attributes</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#classes-define-objectshttpslaunchschoolcombooksoo_rubyreadthe_object_modelclassesdefineobjects><a href=https://launchschool.com/books/oo_ruby/read/the_object_model#classesdefineobjects>Classes Define Objects</a></a></li></ol><ol><li><a href=#knowledge-index>Knowledge Index</a></li></ol></nav></details></aside><a href=#metadata><h1 id=metadata><span class=hanchor arialabel=Anchor># </span>Metadata</h1></a><p>2022-06-06 01:22 | oop |
+<a href=https://github.com/DorielRivalet rel=noopener>Doriel Rivalet</a></p><a href=#content><h1 id=content><span class=hanchor arialabel=Anchor># </span>Content</h1></a><p>lambdas are nameless methods/functions</p><p>another name for properties are attributes</p><p>classes have properties and objects have attributes?</p><p>the @ in Ruby classes is the same as <code>private</code> in Java classes</p><p>In Ruby, we use <code>@</code> before a variable to signify that it’s an <em>instance variable</em>. This means that the variable is attached to the <em>instance</em> of the class.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Person</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>matz</span> <span class=o>=</span> <span class=no>Person</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;Yukihiro&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Another important aspect of Ruby classes is <em>scope</em>. The scope of a variable is the context in which it’s visible to the program.</p><p>When dealing with classes, you can have variables that are available everywhere (<em>global variables</em>), ones that are only available inside certain methods (<em>local variables</em>), others that are members of a certain class (<em>class variables</em>), and variables that are only available to particular instances of a class (<em>instance variables</em>).</p><p>global, local, class, instance</p><p>what is <code>$</code>, <code>@</code>, or <code>@@</code> prepended to a variable name? This helps mark them as global, instance, and class variables (respectively).</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Computer</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vg>$manufacturer</span> <span class=o>=</span> <span class=s2>&#34;Mango Computer, Inc.&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vc>@@files</span> <span class=o>=</span> <span class=p>{</span><span class=ss>hello</span><span class=p>:</span> <span class=s2>&#34;Hello, world!&#34;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>username</span><span class=p>,</span> <span class=n>password</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@username</span> <span class=o>=</span> <span class=n>username</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@password</span> <span class=o>=</span> <span class=n>password</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>current_user</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@username</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nc>self</span><span class=o>.</span><span class=nf>display_files</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vc>@@files</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Make a new Computer instance:</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>hal</span> <span class=o>=</span> <span class=no>Computer</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;Dave&#34;</span><span class=p>,</span> <span class=mi>12345</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Current user: </span><span class=si>#{</span><span class=n>hal</span><span class=o>.</span><span class=n>current_user</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># @username belongs to the hal instance.</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Manufacturer: </span><span class=si>#{</span><span class=vg>$manufacturer</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># $manufacturer is global! We can get it directly.</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Files: </span><span class=si>#{</span><span class=no>Computer</span><span class=o>.</span><span class=n>display_files</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># @@files belongs to the Computer class.</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1>#Current user: Dave</span>
+</span></span><span class=line><span class=cl><span class=c1>#Manufacturer: Mango Computer, Inc.</span>
+</span></span><span class=line><span class=cl><span class=c1>#Files: {:hello=&gt;&#34;Hello, world!&#34;}</span>
+</span></span></code></pre></td></tr></table></div></div><p><em>Global variables</em> can be declared in two ways. The first is one that’s already familiar to you: you just define the variable outside of any method or class, and voilà! It’s global. If you want to make a variable global from inside a method or class, just start it with a <code>$</code>, like so: <code>$matz</code>.</p><p>rule of thumb: modularise variables, limit their scope</p><p>limit the scope of everything</p><p>sandboxing</p><p>we can use a class variable to keep track of the number of instances of that class we’ve created. Let’s do that now!</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Person</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=c1># Set your class variable to 0 on line 3</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=vc>@@people_count</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=c1># Increment your class variable on line 8</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vc>@@people_count</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nc>self</span><span class=o>.</span><span class=nf>number_of_instances</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=c1># Return your class variable on line 13</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vc>@@people_count</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>matz</span> <span class=o>=</span> <span class=no>Person</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;Yukihiro&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>dhh</span> <span class=o>=</span> <span class=no>Person</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;David&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Number of Person instances: </span><span class=si>#{</span><span class=no>Person</span><span class=o>.</span><span class=n>number_of_instances</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>SuperBadError</span> <span class=o>&lt;</span> <span class=no>ApplicationError</span> <span class=c1>#same as saying SuperBadError inherits FROM ApplicationError, so superbaderror is a child class or subclass of applicationerror, which is the superclass or parent class</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>DerivedClass</span> <span class=o>&lt;</span> <span class=no>BaseClass</span>  
+</span></span><span class=line><span class=cl>  <span class=c1># Some stuff!  </span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>you can override/overwrite methods/attributes you inherit from</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>DerivedClass</span> <span class=o>&lt;</span> <span class=no>Base</span> 
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>some_method</span> 
+</span></span><span class=line><span class=cl>		<span class=k>super</span><span class=p>(</span><span class=n>optional</span> <span class=n>args</span><span class=p>)</span> <span class=c1># Some stuff </span>
+</span></span><span class=line><span class=cl>		<span class=k>end</span> 
+</span></span><span class=line><span class=cl>	<span class=k>end</span> 
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>When you call <code>super</code> from inside a method, that tells Ruby to look in the superclass of the current class and find a method with the same name as the one from which <code>super</code> is called. If it finds it, Ruby will use the superclass’ version of the method.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Creature</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>fight</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=s2>&#34;Punch to the chops!&#34;</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Add your code below!</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Dragon</span> <span class=o>&lt;</span> <span class=no>Creature</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>fight</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=nb>puts</span> <span class=s2>&#34;Instead of breathing fire...&#34;</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=k>super</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Instead of breathing fire...
+</span></span><span class=line><span class=cl>Punch to the chops!
+</span></span></code></pre></td></tr></table></div></div><p>Any given Ruby class can have only one superclass. Some languages allow a class to have more than one parent, which is a model called <strong>multiple inheritance</strong>. This can get really ugly really fast, which is why Ruby disallows it.</p><p>However, there are instances where you want to incorporate data or behavior from several classes into a single class, and Ruby allows this through the use of <em>mixins</em>. We’ll learn about mixins in a later lesson! For now, we’ll demonstrate what happens if you try to do multiple inheritance in Ruby.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1># class Monkey end on just one line: `class Monkey; end`.</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Message</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=vc>@@messages_sent</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>from</span><span class=p>,</span><span class=n>to</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=vi>@from</span> <span class=o>=</span> <span class=n>from</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vi>@to</span> <span class=o>=</span> <span class=n>to</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vc>@@messages_sent</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Email</span> <span class=o>&lt;</span> <span class=no>Message</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>from</span><span class=p>,</span><span class=n>to</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=k>super</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>my_message</span> <span class=o>=</span> <span class=no>Message</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;a&#34;</span><span class=p>,</span><span class=s2>&#34;b&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Computer</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=vc>@@users</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nc>Computer</span><span class=o>.</span><span class=nf>get_users</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=vc>@@users</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>username</span><span class=p>,</span><span class=n>password</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=vi>@username</span><span class=p>,</span> <span class=vi>@password</span> <span class=o>=</span> <span class=n>username</span><span class=p>,</span> <span class=n>password</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vi>@files</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vc>@@users</span><span class=o>[</span><span class=n>username</span><span class=o>]</span> <span class=o>=</span> <span class=n>password</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>create</span><span class=p>(</span><span class=n>filename</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=n>time</span> <span class=o>=</span> <span class=no>Time</span><span class=o>.</span><span class=n>now</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=vi>@files</span><span class=o>[</span><span class=n>filename</span><span class=o>]</span> <span class=o>=</span> <span class=n>time</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>		<span class=nb>puts</span> <span class=s2>&#34;new file created, </span><span class=si>#{</span><span class=n>filename</span><span class=si>}</span><span class=s2> </span><span class=si>#{</span><span class=n>time</span><span class=si>}</span><span class=s2> </span><span class=si>#{</span><span class=nb>self</span><span class=o>.</span><span class=n>username</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>my_computer</span> <span class=o>=</span> <span class=no>Computer</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;a&#34;</span><span class=p>,</span><span class=s2>&#34;b&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Ruby allows you to explicitly make some methods <code>public</code> and others <code>private</code>. Public methods allow for an <strong>interface</strong> with the rest of the program; they say, “Hey! Ask me if you need to know something about my class or its instances.”</p><p><code>private</code> methods are just that: they’re private to the object where they are defined. This means you can only call these methods from other code inside the object. Another way to say this is that the method cannot be called with an <em>explicit receiver</em>. You’ve been using receivers all along—these are the objects on which methods are called! Whenever you call <code>object.method</code>, <code>object</code> is the receiver of the <code>method</code>.</p><p>In order to access private information, we have to create public methods that know how to get it. This separates the private <em>implementation</em> from the public <em>interface</em>, and we’ll go over this in more detail in the next two exercises.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Dog</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>,</span> <span class=n>breed</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@breed</span> <span class=o>=</span> <span class=n>breed</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>public</span> <span class=k>def</span> <span class=nf>bark</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Woof!&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>private</span> <span class=k>def</span> <span class=nf>id</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@id_number</span> <span class=o>=</span> <span class=mi>12345</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>If we want to both read and write a particular variable, there’s an even shorter shortcut than using <code>attr_reader</code> and <code>attr_writer</code>. We can use <code>attr_accessor</code> to make a variable readable <em>and</em> writeable in one fell swoop.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Person</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>attr_reader</span> <span class=ss>:name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>attr_accessor</span> <span class=ss>:job</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>,</span> <span class=n>job</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@job</span> <span class=o>=</span> <span class=n>job</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>module</span> <span class=nn>MyLibrary</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=no>FAVE_BOOK</span> <span class=o>=</span> <span class=s2>&#34;The Hobbit&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>One of the main purposes of modules is to separate methods and constants into named spaces. This is called (conveniently enough) <strong>namespacing</strong>, and it’s how Ruby doesn’t confuse <code>Math::PI</code> and <code>Circle::PI</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span>
+</span></span><span class=line><span class=cl><span class=c1>//So when we run a program to print something, “using namespace std” says **if you find something that is not declared in the current scope go and check std**. using namespace std; are used. It is because computer needs to know the code for the cout, cin functionalities and it needs to know which namespace they are defined.
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>std</span><span class=o>::</span><span class=n>cout</span>
+</span></span></code></pre></td></tr></table></div></div><p>See that double colon we just used? That’s called the <strong>scope resolution operator</strong>, which is a fancy way of saying it tells Ruby <em>where</em> you’re looking for a specific bit of code. If we say <code>Math::PI</code>, Ruby knows to look inside the <code>Math</code> module to get that <code>PI</code>, not any other <code>PI</code> (such as the one we created in <code>Circle</code>).</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;date&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=no>Date</span><span class=o>.</span><span class=n>today</span>
+</span></span></code></pre></td></tr></table></div></div><p>We can do more than just <code>require</code> a module, however. We can also <code>include</code> it!</p><p>Any class that <code>include</code>s a certain module can use those module’s methods!</p><p>A nice effect of this is that you no longer have to prepend your constants and methods with the module name. Since everything has been pulled in, you can simply write <code>PI</code> instead of <code>Math::PI</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Angle</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=kp>include</span> <span class=no>Math</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=kp>attr_accessor</span> <span class=ss>:radians</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>radians</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=vi>@radians</span> <span class=o>=</span> <span class=n>radians</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>cosine</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>		<span class=n>cos</span><span class=p>(</span><span class=vi>@radians</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>acute</span> <span class=o>=</span> <span class=no>Angle</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>acute</span><span class=o>.</span><span class=n>cosine</span>
+</span></span></code></pre></td></tr></table></div></div><p>When a module is used to mix additional behavior and information into a class, it’s called a <strong>mixin</strong>. Mixins allow us to customize a class without having to rewrite code!</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>module</span> <span class=nn>Action</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>jump</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@distance</span> <span class=o>=</span> <span class=nb>rand</span><span class=p>(</span><span class=mi>4</span><span class=p>)</span> <span class=o>+</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;I jumped forward </span><span class=si>#{</span><span class=vi>@distance</span><span class=si>}</span><span class=s2> feet!&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Rabbit</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>include</span> <span class=no>Action</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>attr_reader</span> <span class=ss>:name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Cricket</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>include</span> <span class=no>Action</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>attr_reader</span> <span class=ss>:name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@name</span> <span class=o>=</span> <span class=nb>name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>peter</span> <span class=o>=</span> <span class=no>Rabbit</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;Peter&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>jiminy</span> <span class=o>=</span> <span class=no>Cricket</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;Jiminy&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>peter</span><span class=o>.</span><span class=n>jump</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>jiminy</span><span class=o>.</span><span class=n>jump</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#I jumped forward 4 feet!</span>
+</span></span><span class=line><span class=cl><span class=c1>#I jumped forward 3 feet!</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1># Create your module here!</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>module</span> <span class=nn>MartialArts</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>swordsman</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;I&#39;m a swordsman.&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Ninja</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>include</span> <span class=no>MartialArts</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>clan</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@clan</span> <span class=o>=</span> <span class=n>clan</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Samurai</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>include</span> <span class=no>MartialArts</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>shogun</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@shogun</span> <span class=o>=</span> <span class=n>shogun</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>Whereas <code>include</code> mixes a module’s methods in at the instance level (allowing instances of a particular class to use the methods), the <code>extend</code> keyword mixes a module’s methods at the <em>class</em> level. This means that <em>class itself</em> can use the methods, as opposed to <em>instances</em> of the class.</p><p>You probably also noticed we used underscores in our <code>1_000_000</code> (one million). Ruby allows this, and it makes it easier to read big numbers! Cool, no?</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Account</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>attr_reader</span> <span class=ss>:name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>attr_reader</span> <span class=ss>:balance</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>,</span> <span class=n>balance</span><span class=o>=</span><span class=mi>100</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@name</span><span class=o>=</span><span class=nb>name</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@balance</span><span class=o>=</span><span class=n>balance</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>private</span> <span class=k>def</span> <span class=nf>pin</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=vi>@pin</span> <span class=o>=</span> <span class=mi>1234</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>private</span> <span class=k>def</span> <span class=nf>pin_error</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=s2>&#34;Access denied: incorrect PIN.&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>public</span> <span class=k>def</span> <span class=nf>display_balance</span><span class=p>(</span><span class=n>pin_number</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>pin_number</span> <span class=o>==</span> <span class=n>pin</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Balance: $</span><span class=si>#{</span><span class=vi>@balance</span><span class=si>}</span><span class=s2>.&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>else</span> <span class=n>pin_error</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kp>public</span> <span class=k>def</span> <span class=nf>withdraw</span><span class=p>(</span><span class=n>pin_number</span><span class=p>,</span><span class=n>amount</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>pin_number</span> <span class=o>==</span> <span class=vi>@pin</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>balance</span> <span class=o>-=</span> <span class=n>amount</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=s2>&#34;Withdrew </span><span class=si>#{</span><span class=n>amount</span><span class=si>}</span><span class=s2>. New balance: $</span><span class=si>#{</span><span class=vi>@balance</span><span class=si>}</span><span class=s2>.&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>puts</span> <span class=n>pin_error</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>checking_account</span> <span class=o>=</span> <span class=no>Account</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s2>&#34;a&#34;</span><span class=p>,</span><span class=mi>1000</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p><strong>Encapsulation</strong> is hiding pieces of functionality and making it unavailable to the rest of the code base. It is a form of data protection, so that data cannot be manipulated or changed without obvious intention. It is what defines the boundaries in your application and allows your code to achieve new levels of complexity. Ruby, like many other OO languages, accomplishes this task by creating objects, and exposing interfaces (i.e., methods) to interact with those objects.</p><p><strong>Polymorphism</strong> is the ability for different types of data to respond to a common interface. For instance, if we have a method that expects argument objects that have a <code>move</code> method, we can pass it any type of argument, provided it has a compatible <code>move</code> method. The object might represent a human, a cat, a jellyfish, or, conceivably, even a car or train. That is, it lets objects of different types respond to the same method invocation.</p><p><a href=https://launchschool.com/books/oo_ruby/read/the_object_model rel=noopener>https://launchschool.com/books/oo_ruby/read/the_object_model</a></p><h2 id=classes-define-objectshttpslaunchschoolcombooksoo_rubyreadthe_object_modelclassesdefineobjects><a href=https://launchschool.com/books/oo_ruby/read/the_object_model#classesdefineobjects rel=noopener>Classes Define Objects</a></h2><p>modules are another way to achieve polymorphism in Ruby. A <strong>module</strong> is a collection of behaviors that is usable in other classes via <strong>mixins</strong>. A module is &ldquo;mixed in&rdquo; to a class using the <code>include</code> method invocation. Let&rsquo;s say we wanted our <code>GoodDog</code> class to have a <code>speak</code> method but we have other classes that we want to use a speak method with too. Here&rsquo;s how we&rsquo;d do it.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>module</span> <span class=nn>Speak</span>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>speak</span><span class=p>(</span><span class=n>sound</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nb>puts</span> <span class=n>sound</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>GoodDog</span>
+</span></span><span class=line><span class=cl>  <span class=kp>include</span> <span class=no>Speak</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>HumanBeing</span>
+</span></span><span class=line><span class=cl>  <span class=kp>include</span> <span class=no>Speak</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>sparky</span> <span class=o>=</span> <span class=no>GoodDog</span><span class=o>.</span><span class=n>new</span>
+</span></span><span class=line><span class=cl><span class=n>sparky</span><span class=o>.</span><span class=n>speak</span><span class=p>(</span><span class=s2>&#34;Arf!&#34;</span><span class=p>)</span>        <span class=c1># =&gt; Arf!</span>
+</span></span><span class=line><span class=cl><span class=n>bob</span> <span class=o>=</span> <span class=no>HumanBeing</span><span class=o>.</span><span class=n>new</span>
+</span></span><span class=line><span class=cl><span class=n>bob</span><span class=o>.</span><span class=n>speak</span><span class=p>(</span><span class=s2>&#34;Hello!&#34;</span><span class=p>)</span>         <span class=c1># =&gt; Hello!</span>
+</span></span></code></pre></td></tr></table></div></div><p>We can use the <code>ancestors</code> method on any class to find out the method lookup chain.</p><p>To disambiguate from creating a local variable, we need to use <code>self.name=</code> to let Ruby know that we&rsquo;re calling a method. So our <code>change_info</code> code should be updated to this:</p><p>This tells Ruby that we&rsquo;re calling a setter method, not creating a local variable. To be consistent, we could also adopt this syntax for the getter methods as well, though it is not required.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>def</span> <span class=nf>info</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;</span><span class=si>#{</span><span class=nb>self</span><span class=o>.</span><span class=n>name</span><span class=si>}</span><span class=s2> weighs </span><span class=si>#{</span><span class=nb>self</span><span class=o>.</span><span class=n>weight</span><span class=si>}</span><span class=s2> and is </span><span class=si>#{</span><span class=nb>self</span><span class=o>.</span><span class=n>height</span><span class=si>}</span><span class=s2> tall.&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>Note that prefixing <code>self.</code> is not restricted to just the accessor methods; you can use it with any instance method. For example, the <code>info</code> method is not a method given to us by <code>attr_accessor</code>, but we can still call it using <code>self.info</code>:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>GoodDog</span>
+</span></span><span class=line><span class=cl>  <span class=c1># ... rest of code omitted for brevity</span>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>some_method</span>
+</span></span><span class=line><span class=cl>    <span class=nb>self</span><span class=o>.</span><span class=n>info</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>While this works, the general rule from the 
+<a href=https://rubystyle.guide/#no-self-unless-required rel=noopener>Ruby style guide</a> is to &ldquo;Avoid self where not required.&rdquo;</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1># bad </span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>ready?</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=nb>self</span><span class=o>.</span><span class=n>last_reviewed_at</span> <span class=o>&gt;</span> <span class=nb>self</span><span class=o>.</span><span class=n>last_updated_at</span>
+</span></span><span class=line><span class=cl>		<span class=nb>self</span><span class=o>.</span><span class=n>worker</span><span class=o>.</span><span class=n>update</span><span class=p>(</span><span class=nb>self</span><span class=o>.</span><span class=n>content</span><span class=p>,</span> <span class=nb>self</span><span class=o>.</span><span class=n>options</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl>		<span class=nb>self</span><span class=o>.</span><span class=n>status</span> <span class=o>=</span> <span class=ss>:in_progress</span> 
+</span></span><span class=line><span class=cl>	<span class=k>end</span> 
+</span></span><span class=line><span class=cl>	<span class=nb>self</span><span class=o>.</span><span class=n>status</span> <span class=o>==</span> <span class=ss>:verified</span> 
+</span></span><span class=line><span class=cl><span class=k>end</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># good </span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>ready?</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=n>last_reviewed_at</span> <span class=o>&gt;</span> <span class=n>last_updated_at</span> 
+</span></span><span class=line><span class=cl>		<span class=n>worker</span><span class=o>.</span><span class=n>update</span><span class=p>(</span><span class=n>content</span><span class=p>,</span> <span class=n>options</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl>		<span class=nb>self</span><span class=o>.</span><span class=n>status</span> <span class=o>=</span> <span class=ss>:in_progress</span> 
+</span></span><span class=line><span class=cl>	<span class=k>end</span> 
+</span></span><span class=line><span class=cl>	<span class=n>status</span> <span class=o>==</span> <span class=ss>:verified</span> 
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Person</span>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>age</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=vi>@age</span> <span class=o>=</span> <span class=n>age</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>age</span>
+</span></span><span class=line><span class=cl>    <span class=vi>@age</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>age_difference_with</span><span class=p>(</span><span class=n>other_person</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>(</span><span class=nb>self</span><span class=o>.</span><span class=n>age</span> <span class=o>-</span> <span class=n>other_person</span><span class=o>.</span><span class=n>age</span><span class=p>)</span><span class=o>.</span><span class=n>abs</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kp>protected</span> <span class=ss>:age</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>Writing <code>@age</code> directly accesses the instance variable <code>@age</code>. Writing <code>self.age</code> tells the object to send itself the message <code>age</code>, which will usually return the instance variable <code>@age</code> — but could do any number of other things depending on how the <code>age</code> method is implemented in a given subclass. For example, you might have a MiddleAgedSocialite class that always reports its age 10 years younger than it actually is. Or more practically, a PersistentPerson class might lazily read that data from a persistent store, cache all its persistent data in a hash.</p><hr><p>When you find that you want the same method to be run on a bunch of different objects without having to make a bunch of different <code>if/else</code> or <code>case</code> statements, you should start thinking about using a class.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Viking</span>
+</span></span><span class=line><span class=cl>    <span class=vc>@@starting_health</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>,</span> <span class=n>age</span><span class=p>,</span> <span class=n>strength</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=vi>@health</span> <span class=o>=</span> <span class=vc>@@starting_health</span>
+</span></span><span class=line><span class=cl>        <span class=c1># ...other stuff</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>There are two good times to use class methods: when you&rsquo;re building new instances of a class that have a bunch of known or &ldquo;preset&rdquo; features, and when you have some sort of utility method that should be identical across all instances and won&rsquo;t need to directly access instance variables.</p><p>The first case is called a <strong>factory method</strong>, and is designed to save you from having to keep passing a bunch of parameters manually to your <code>#initialize</code> method:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Viking</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=nb>name</span><span class=p>,</span> <span class=n>health</span><span class=p>,</span> <span class=n>age</span><span class=p>,</span> <span class=n>strength</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#... set variables</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nc>self</span><span class=o>.</span><span class=nf>create_warrior</span><span class=p>(</span><span class=nb>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>age</span> <span class=o>=</span> <span class=nb>rand</span> <span class=o>*</span> <span class=mi>20</span> <span class=o>+</span> <span class=mi>15</span>   <span class=c1># remember, rand gives a random 0 to 1</span>
+</span></span><span class=line><span class=cl>        <span class=n>health</span> <span class=o>=</span> <span class=o>[</span><span class=n>age</span> <span class=o>*</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>120</span><span class=o>].</span><span class=n>min</span>
+</span></span><span class=line><span class=cl>        <span class=n>strength</span> <span class=o>=</span> <span class=o>[</span><span class=n>age</span> <span class=o>/</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>10</span><span class=o>].</span><span class=n>min</span>
+</span></span><span class=line><span class=cl>        <span class=no>Viking</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=nb>name</span><span class=p>,</span> <span class=n>health</span><span class=p>,</span> <span class=n>age</span><span class=p>,</span> <span class=n>strength</span><span class=p>)</span>  <span class=c1># returned</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#&gt; sten = Viking.create_warrior(&#34;Sten&#34;)</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; #&lt;Viking:0x007ffc05a79848 @age=21.388120526202737, </span>
+</span></span></code></pre></td></tr></table></div></div><p>If a hash (good data storage) and a module (good methods) had a love child, would it be a class (object with methods)?</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=mi>1</span><span class=o>.</span><span class=n>class</span><span class=o>.</span><span class=n>superclass</span><span class=o>.</span><span class=n>superclass</span><span class=o>.</span><span class=n>superclass</span><span class=o>.</span><span class=n>superclass</span>
+</span></span><span class=line><span class=cl><span class=c1>#=&gt; BasicObject</span>
+</span></span></code></pre></td></tr></table></div></div><p><strong>Scope</strong> is the formal term that represents when you can access a variable or method and when you can&rsquo;t. It&rsquo;s nothing explicit in the code (you&rsquo;re never calling a method named <code>scope</code> or anything like that); it&rsquo;s just a concept. If your variable is &ldquo;in scope&rdquo; then it&rsquo;s available for use, otherwise it&rsquo;s &ldquo;out of scope&rdquo;.</p><p>Since we don&rsquo;t want <code>#take_damage</code> to be visible to anyone on the command line but we DO want it to be visible to the methods inside other instances of <code>Viking</code>, we call that <strong><code>protected</code></strong>. <code>protected</code> provides most of the privacy of <code>private</code> but lets the methods inside other instances of the same class or its descendents also access it:</p><p>In Ruby, a protected method (or protected message handler) <strong>can only respond to a message with an implicit/explicit receiver (object) of the same family</strong>. It also cannot respond to a message sent from outside of the protected message handler context.</p><p>Both protected and private methods cannot be called from the outside of the defining class. <strong>Protected methods are accessible from the subclass and private methods are not</strong>. Private methods of the defining class can be invoked by any instance of that class. Public access is the default one.</p><p><code>protected</code> methods can be called by any instance of the defining class or its subclasses.</p><p><code>private</code> methods can be called only from within the calling object. You cannot access another instance&rsquo;s private methods directly.</p><p><code>attr_accessor :name, :location</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Movie</span>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=kp>attr_accessor</span> <span class=ss>:title</span><span class=p>,</span> <span class=ss>:showtime</span><span class=p>,</span> <span class=ss>:cinema</span>  
+</span></span><span class=line><span class=cl>	<span class=vc>@@all</span> <span class=o>=</span> <span class=o>[]</span>  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>	<span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>title</span><span class=p>,</span> <span class=n>showtime</span><span class=p>)</span>  
+</span></span><span class=line><span class=cl>	    <span class=vi>@title</span> <span class=o>=</span> <span class=n>title</span>  
+</span></span><span class=line><span class=cl>	    <span class=vi>@showtime</span> <span class=o>=</span> <span class=n>showtime</span>  
+</span></span><span class=line><span class=cl>	    <span class=vc>@@all</span> <span class=o>&lt;&lt;</span> <span class=nb>self</span>  
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>def</span> <span class=nf>add_movie</span><span class=p>(</span><span class=n>movie</span><span class=p>)</span>  
+</span></span><span class=line><span class=cl>	<span class=vi>@movies</span> <span class=o>&lt;&lt;</span> <span class=n>movie</span>  
+</span></span><span class=line><span class=cl>	<span class=n>movie</span><span class=o>.</span><span class=n>cinema</span> <span class=o>=</span> <span class=nb>self</span>  
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1>#exception handling</span>
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=s2>&#34;42&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>begin</span>
+</span></span><span class=line><span class=cl>   <span class=n>a</span> <span class=o>+</span> <span class=n>b</span>
+</span></span><span class=line><span class=cl><span class=k>rescue</span>
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=s2>&#34;Could not add variables a (</span><span class=si>#{</span><span class=n>a</span><span class=o>.</span><span class=n>class</span><span class=si>}</span><span class=s2>) and b (</span><span class=si>#{</span><span class=n>b</span><span class=o>.</span><span class=n>class</span><span class=si>}</span><span class=s2>)&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=s2>&#34;a + b is </span><span class=si>#{</span><span class=n>a</span> <span class=o>+</span> <span class=n>b</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>ensure</span>
+</span></span><span class=line><span class=cl>	<span class=nb>puts</span> <span class=s2>&#34;this will print regardless&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><p>the <code>ensure</code> branch will execute whether an error/exception was rescued or not. Here, we&rsquo;ve decided to sleep for 3 seconds no matter the outcome of the open method. (
+<a href=http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-ensure rel=noopener>ruby-doc definition</a>)</p><p>retry retries the begin block.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;open-uri&#39;</span>
+</span></span><span class=line><span class=cl><span class=n>remote_base_url</span> <span class=o>=</span> <span class=s2>&#34;http://en.wikipedia.org/wiki&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[</span><span class=mi>1900</span><span class=p>,</span> <span class=mi>1910</span><span class=p>,</span> <span class=s1>&#39;xj3490&#39;</span><span class=p>,</span> <span class=mi>2000</span><span class=o>].</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>yr</span><span class=o>|</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=n>retries</span> <span class=o>=</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl> <span class=k>begin</span>
+</span></span><span class=line><span class=cl>   <span class=n>url</span> <span class=o>=</span> <span class=s2>&#34;</span><span class=si>#{</span><span class=n>remote_base_url</span><span class=si>}</span><span class=s2>/</span><span class=si>#{</span><span class=n>yr</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=s2>&#34;Getting page </span><span class=si>#{</span><span class=n>url</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>   <span class=n>rpage</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=n>url</span><span class=p>)</span>
+</span></span><span class=line><span class=cl> <span class=k>rescue</span> <span class=no>StandardError</span><span class=o>=&gt;</span><span class=n>e</span>
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=s2>&#34;</span><span class=se>\t</span><span class=s2>Error: </span><span class=si>#{</span><span class=n>e</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>   <span class=k>if</span> <span class=n>retries</span> <span class=o>&gt;</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>       <span class=nb>puts</span> <span class=s2>&#34;</span><span class=se>\t</span><span class=s2>Trying </span><span class=si>#{</span><span class=n>retries</span><span class=si>}</span><span class=s2> more times&#34;</span>
+</span></span><span class=line><span class=cl>       <span class=n>retries</span> <span class=o>-=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>       <span class=nb>sleep</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>       <span class=k>retry</span>
+</span></span><span class=line><span class=cl>   <span class=k>else</span>
+</span></span><span class=line><span class=cl>       <span class=nb>puts</span> <span class=s2>&#34;</span><span class=se>\t\t</span><span class=s2>Can&#39;t get </span><span class=si>#{</span><span class=n>yr</span><span class=si>}</span><span class=s2>, so moving on&#34;</span>
+</span></span><span class=line><span class=cl>   <span class=k>end</span>    
+</span></span><span class=line><span class=cl> <span class=k>else</span>
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=s2>&#34;</span><span class=se>\t</span><span class=s2>Got page for </span><span class=si>#{</span><span class=n>yr</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl> <span class=k>ensure</span>   
+</span></span><span class=line><span class=cl>   <span class=nb>puts</span> <span class=s2>&#34;Ensure branch; sleeping&#34;</span>
+</span></span><span class=line><span class=cl>   <span class=nb>sleep</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=o>**</span><span class=no>Exception</span><span class=o>**</span>
+</span></span><span class=line><span class=cl>    <span class=no>NoMemoryError</span>
+</span></span><span class=line><span class=cl>    <span class=no>ScriptError</span>
+</span></span><span class=line><span class=cl>        <span class=no>LoadError</span>
+</span></span><span class=line><span class=cl>        <span class=no>NotImplementedError</span>
+</span></span><span class=line><span class=cl>        <span class=no>SyntaxError</span>
+</span></span><span class=line><span class=cl>    <span class=no>SignalException</span>
+</span></span><span class=line><span class=cl>        <span class=no>Interrupt</span>
+</span></span><span class=line><span class=cl>    <span class=o>**</span><span class=no>StandardError</span><span class=o>**</span>
+</span></span><span class=line><span class=cl>        <span class=no>ArgumentError</span>
+</span></span><span class=line><span class=cl>        <span class=no>IOError</span>
+</span></span><span class=line><span class=cl>            <span class=no>EOFError</span>
+</span></span><span class=line><span class=cl>        <span class=no>IndexError</span>
+</span></span><span class=line><span class=cl>            <span class=no>StopIteration</span>
+</span></span><span class=line><span class=cl>        <span class=no>LocalJumpError</span>
+</span></span><span class=line><span class=cl>        <span class=no>NameError</span>
+</span></span><span class=line><span class=cl>            <span class=no>NoMethodError</span>
+</span></span><span class=line><span class=cl>        <span class=no>RangeError</span>
+</span></span><span class=line><span class=cl>            <span class=no>FloatDomainError</span>
+</span></span><span class=line><span class=cl>        <span class=no>RegexpError</span>
+</span></span><span class=line><span class=cl>        <span class=no>RuntimeError</span>
+</span></span><span class=line><span class=cl>        <span class=no>SecurityError</span>
+</span></span><span class=line><span class=cl>        <span class=no>SystemCallError</span>
+</span></span><span class=line><span class=cl>        <span class=no>SystemStackError</span>
+</span></span><span class=line><span class=cl>        <span class=no>ThreadError</span>
+</span></span><span class=line><span class=cl>        <span class=no>TypeError</span>
+</span></span><span class=line><span class=cl>        <span class=no>ZeroDivisionError</span>
+</span></span><span class=line><span class=cl>    <span class=no>SystemExit</span>
+</span></span><span class=line><span class=cl>    <span class=n>fatal</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Lamp</span>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nc>self</span><span class=o>.</span><span class=nf>about_me</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>(</span><span class=s2>&#34;We brighten up people&#39;s lives&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#OR</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Lamp</span>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nc>Lamp</span><span class=o>.</span><span class=nf>about_me</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>(</span><span class=s2>&#34;We brighten up people&#39;s lives&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#The about_me() method can be called directly on the Lamp class:</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=no>Lamp</span><span class=o>.</span><span class=n>about_me</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=k>class</span> <span class=nc>Person</span>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>initialize</span><span class=p>(</span><span class=n>age</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=vi>@age</span> <span class=o>=</span> <span class=n>age</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>age</span><span class=o>=</span><span class=p>(</span><span class=n>new_age</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=vi>@age</span> <span class=o>=</span> <span class=n>new_age</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>age</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>(</span><span class=vi>@age</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>p</span> <span class=o>=</span> <span class=no>Person</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=mi>24</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>p</span><span class=o>.</span><span class=n>age</span>  <span class=c1># returns 24</span>
+</span></span><span class=line><span class=cl><span class=nb>p</span><span class=o>.</span><span class=n>age</span><span class=o>=</span><span class=p>(</span><span class=mi>42</span><span class=p>)</span>  <span class=c1># update the @age instance variable</span>
+</span></span><span class=line><span class=cl><span class=nb>p</span><span class=o>.</span><span class=n>age</span>  <span class=c1># now returns 42</span>
+</span></span></code></pre></td></tr></table></div></div><p>Modules cannot be used to create objects</p><p>Array.ancestors()</p><p>Array.ancestors() returns the following array: [Array, Enumerable, Object, Kernel, BasicObject]. In this list, Array, Object, and BasicObject are classes. Array inherits from Object and Object inherits from BasicObject. Enumerable and Kernel are modules. The Enumerable module is included in the Array class and the Kernel module is mixed-in to the Object class (mixed-in is another way of saying that a module is included in a class).</p><a href=#sources><h1 id=sources><span class=hanchor arialabel=Anchor># </span>Sources</h1></a><p>Own notes</p><p><a href=https://www.theodinproject.com/lessons/ruby-object-oriented-programming rel=noopener>https://www.theodinproject.com/lessons/ruby-object-oriented-programming</a></p><p><a href=https://www.codecademy.com/courses/learn-ruby/lessons/object-oriented-programming-i/exercises/scope-it-out rel=noopener>https://www.codecademy.com/courses/learn-ruby/lessons/object-oriented-programming-i/exercises/scope-it-out</a></p><p><a href=https://launchschool.com/books/oo_ruby/read/the_object_model rel=noopener>https://launchschool.com/books/oo_ruby/read/the_object_model</a></p><p><a href=https://launchschool.com/books/oo_ruby/read/classes_and_objects_part1#statesandbehaviors rel=noopener>https://launchschool.com/books/oo_ruby/read/classes_and_objects_part1#statesandbehaviors</a></p><p><a href=https://rubystyle.guide/#no-self-unless-required rel=noopener>https://rubystyle.guide/#no-self-unless-required</a></p><p><a href=https://stackoverflow.com/questions/1693243/instance-variable-self-vs rel=noopener>https://stackoverflow.com/questions/1693243/instance-variable-self-vs</a></p><p><a href=https://www.eriktrautman.com/posts/ruby-explained-classes rel=noopener>https://www.eriktrautman.com/posts/ruby-explained-classes</a></p><a href=#content-lists><h1 id=content-lists><span class=hanchor arialabel=Anchor># </span>Content Lists</h1></a><p>If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:</p><ul><li><a href=/quartz/notes/ rel=noopener class=internal-link data-src=/quartz/notes/>All Notes</a></li></ul><a href=#knowledge-index><h2 id=knowledge-index><span class=hanchor arialabel=Anchor># </span>Knowledge Index</h2></a><ul><li><a href=/quartz/notes/index-list/the-odin-project/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/the-odin-project/>The Odin Project</a></li><li><a href=/quartz/notes/index-list/open-source-society-university/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/open-source-society-university/>Open Source Society University</a></li><li><a href=/quartz/notes/index-list/fullstack-open/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/fullstack-open/>Full Stack Open</a></li><li><a href=/quartz/notes/index-list/miscellaneous/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/miscellaneous/>Miscellaneous</a></li><li><a href=/quartz/notes/index-list/quartz/ rel=noopener class=internal-link data-src=/quartz/notes/index-list/quartz/>Quartz</a></li></ul></article><hr><div class=page-end><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://dorielrivalet.github.io/quartz/js/graph.5388a070919094961d3e5151252e9065.js></script></div></div><div id=contact_buttons><footer><p>Made by Doriel Rivalet using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=/>Home</a></li><li><a href=https://github.com/DorielRivalet>Github</a></li></ul></footer></div></div></body></html>
