@@ -24,6 +24,7 @@ tags:
 - game-theory
 - statistics
 - databases
+- linear-algebra
 ---
 
 # Metadata

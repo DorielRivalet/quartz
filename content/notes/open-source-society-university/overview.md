@@ -759,7 +759,7 @@ public class Sword{
 
 	public void Materialize(){
 		this.state = "Active";
-		System.out.println("A gleaming silver sword had appeared inside the hat, its handle glittering with rubies the size of eggs.)
+		System.out.println("A gleaming silver sword had appeared inside the hat, its handle glittering with rubies the size of eggs.")
 	}
 }
 ```

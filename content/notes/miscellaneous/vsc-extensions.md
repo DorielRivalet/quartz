@@ -8,24 +8,35 @@ tags:
 - miscellaneous
 ---
 
-- github copilot
-- emojisense
-- eslint
-- git history
-- github copilot
-- github markdown preview
-- github pull request and issues
-- github repositories
-- gitlens
-- latex workshop
-- live server
-- markdown all in one
-- markdown emoji
-- markdown preview github styling
-- markdown preview mermaid support
-- markdown yaml preamble
-- material icon theme
-- npm
-- npm intellisense
-- remote repositories
-- wakatime
+1. github copilot
+2. emojisense
+3. eslint
+4. git history
+5. github copilot
+6. github markdown preview
+7. github pull request and issues
+8. github repositories
+9. gitlens
+10. latex workshop
+11. live server
+12. markdown all in one
+13. markdown emoji
+14. markdown preview github styling
+15. markdown preview mermaid support
+16. markdown yaml preamble
+17. material icon theme
+18. npm
+19. npm intellisense
+20. remote repositories
+21. wakatime
+22. fcc dark theme
+23. github theme
+24. markdown checkboxes
+25. markdown footnotes
+26. markdownlint
+27. ruby
+28. vscode rdbg
+29. vscode ruby
+30. tabnine ai autocompletion
+31. -
+
