@@ -22,7 +22,7 @@ If you prefer browsing the contents of this site through a list instead of a gra
 - [All Tags](../../tags/)
 - [miscellaneous-related Notes](../../tags/miscellaneous)
 
-## Knowledge Index
+## [Knowledge](https://youtu.be/WS8Evn-TUuk) Index
 - [The Odin Project](notes/index-list/the-odin-project.md)
 - [Open Source Society University](notes/index-list/open-source-society-university.md)
 - [Full Stack Open](notes/index-list/fullstack-open.md)

@@ -22,7 +22,7 @@ If you prefer browsing the contents of this site through a list instead of a gra
 - [All Tags](../../tags/)
 - [OSSU CS-related Notes](../../tags/computer-science)
 
-## Knowledge Index
+## [Knowledge](https://youtu.be/8A3noNdf6IA) Index
 - [The Odin Project](notes/index-list/the-odin-project.md)
 - [Open Source Society University](notes/index-list/open-source-society-university.md)
 - [Full Stack Open](notes/index-list/fullstack-open.md)
