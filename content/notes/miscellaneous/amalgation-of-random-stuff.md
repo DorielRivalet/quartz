@@ -12,6 +12,20 @@ organize this raw data and put them into other folders
 
 draw.io
 
+the reciprocal of something is 1 / something
+
+1 / (x/y) is same as y/x
+
+cos is opp/hyp, sen is adj/hyp, tan is opp/adj
+
+a ratio is a/b
+
+the neutral elements
+
+for addition its 0, for multiplication its 1, for exponentiation its 1, for division its 1
+
+real analysis https://s2pnd-matematika.fkip.unpatti.ac.id/wp-content/uploads/2019/03/Real-Analysis-4th-Ed-Royden.pdf
+
 levels of explanation
 
 metaprogramming

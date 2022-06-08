@@ -12,7 +12,7 @@ tags:
 2. emojisense
 3. eslint
 4. git history
-5. github copilot
+5. tabnine ai autocompletion
 6. github markdown preview
 7. github pull request and issues
 8. github repositories
@@ -37,6 +37,6 @@ tags:
 27. ruby
 28. vscode rdbg
 29. vscode ruby
-30. tabnine ai autocompletion
+30. 
 31. -
 
