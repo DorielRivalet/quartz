@@ -12,6 +12,8 @@ organize this raw data and put them into other folders
 
 draw.io
 
+https://beej.us/guide/bgnet/html/index-wide.html
+
 the reciprocal of something is 1 / something
 
 1 / (x/y) is same as y/x
