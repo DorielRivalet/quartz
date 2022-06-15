@@ -18,9 +18,10 @@ tags:
 # Content
 1. require coro-http and json
 2. create function according to the doc's endpoint type (GET, POST, PATCH, etc)
-3. (optional) send token/cookie as the function arg if required
-4. coroutine.wrap the function without args
-5. run the function with args
+3. declare the  request and response variables and assign the http request function to them
+4. (optional) send token/cookie as the function arg if required
+5. coroutine.wrap the function without args
+6. run the function with args
 
 # Sources
 Own notes
