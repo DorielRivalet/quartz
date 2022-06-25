@@ -94,7 +94,72 @@ class Person
   end
 ```
 
-replace json with yaml to use yaml
+replace json with yaml to use yaml. or messagepack
+
+```ruby
+class People
+  include BasicSerializable
+
+  attr_accessor :persons
+
+  def initialize
+    @persons = []
+  end
+
+  def serialize
+    obj = @persons.map do |person|
+      person.serialize
+    end
+
+    @@serializer.dump obj
+  end
+
+  def unserialize(string)
+    obj = @@serializer.parse string
+    @persons = []
+    obj.each do |person_string|
+      person = Person.new "", 0, ""
+      person.unserialize(person_string)
+      @persons << person
+    end
+  end
+
+  def <<(person)
+    @persons << person
+  end
+end
+```
+
+
+```ruby
+somefile = File.open("sample.txt", "w")
+somefile.puts "Hello file!"
+somefile.close   
+```
+
+Using "w" mode on an existing file will _erase the contents of that file_. If you want to _append_ to an existing file, use "a" as the second argument.
+
+```ruby
+require "open-uri"
+
+remote_base_url = "http://en.wikipedia.org/wiki"
+remote_page_name = "Ada_Lovelace"
+remote_full_url = remote_base_url + "/" + remote_page_name
+
+remote_data = open(remote_full_url).read
+my_local_file = open("my-downloaded-page.html", "w") 
+
+my_local_file.write(remote_data)
+my_local_file.close
+```
+
+```
+File.open("sample.txt", "w"){ |somefile| somefile.puts "Hello file!"}
+```
+
+The file handle is automatically closed at the end of the block, so no need to call the close method. This is handy in cases when you only need to do all read or write to a file all in one go.
+
+
 
 
 
@@ -104,6 +169,8 @@ Own notes
 https://www.theodinproject.com/lessons/ruby-files-and-serialization
 
 https://thoughtbot.com/blog/io-in-ruby
+
+http://ruby.bastardsbook.com/chapters/io/
 
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:

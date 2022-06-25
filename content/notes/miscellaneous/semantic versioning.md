@@ -4,6 +4,9 @@ date: "2022-06-21 21:53"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - definition
+- changelogs
+- commits
+- documentation
 ---
 
 # Metadata
@@ -15,6 +18,14 @@ tags:
 1 is a major, breaking change
 2 is a minor, backwards-compatible change
 3 is a hotfix, or a bugfix, backwards-compatible change
+
+![[notes/images/Pasted image 20220622074510.png]]
+
+See also [Commit Guidelines](../../miscellaneous/commit%20guidelines) for changelog creation.
+
+Changelogs aren't the same as commit logs.
+
+SemVer stands for Semantic Versioning
 
 # Sources
 Own notes
