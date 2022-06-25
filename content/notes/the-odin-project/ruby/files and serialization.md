@@ -94,7 +94,6 @@ class Person
   end
 ```
 
-<<<<<<< HEAD
 replace json with yaml to use yaml. or messagepack
 
 ```ruby
@@ -161,9 +160,6 @@ File.open("sample.txt", "w"){ |somefile| somefile.puts "Hello file!"}
 The file handle is automatically closed at the end of the block, so no need to call the close method. This is handy in cases when you only need to do all read or write to a file all in one go.
 
 
-=======
-replace json with yaml to use yaml
->>>>>>> 2663bc7f5aa6c055a667fb9ad552e1a15900bb51
 
 
 
@@ -174,11 +170,8 @@ https://www.theodinproject.com/lessons/ruby-files-and-serialization
 
 https://thoughtbot.com/blog/io-in-ruby
 
-<<<<<<< HEAD
 http://ruby.bastardsbook.com/chapters/io/
 
-=======
->>>>>>> 2663bc7f5aa6c055a667fb9ad552e1a15900bb51
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
 
