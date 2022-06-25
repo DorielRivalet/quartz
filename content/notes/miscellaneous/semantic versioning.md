@@ -4,9 +4,12 @@ date: "2022-06-21 21:53"
 author: "[Doriel Rivalet](https://github.com/DorielRivalet)"
 tags:
 - definition
+<<<<<<< HEAD
 - changelogs
 - commits
 - documentation
+=======
+>>>>>>> 2663bc7f5aa6c055a667fb9ad552e1a15900bb51
 ---
 
 # Metadata
@@ -19,6 +22,7 @@ tags:
 2 is a minor, backwards-compatible change
 3 is a hotfix, or a bugfix, backwards-compatible change
 
+<<<<<<< HEAD
 ![[notes/images/Pasted image 20220622074510.png]]
 
 See also [Commit Guidelines](../../miscellaneous/commit%20guidelines) for changelog creation.
@@ -27,6 +31,8 @@ Changelogs aren't the same as commit logs.
 
 SemVer stands for Semantic Versioning
 
+=======
+>>>>>>> 2663bc7f5aa6c055a667fb9ad552e1a15900bb51
 # Sources
 Own notes
 
