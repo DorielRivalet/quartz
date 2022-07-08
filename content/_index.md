@@ -9,13 +9,9 @@ title: Patchouli Computatrum
 
 Welcome to my personal knowledge vault! I mostly post computer science related topics.
 
-## Content Lists
-If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
-
 - [All Notes](notes/)
 - [All Tags](tags/)
 - [Setup-related Notes](tags/setup)
-
 
 ## [Knowledge](https://www.youtube.com/watch?v=ViDjDy3j-y8) Index
 - [The Odin Project](notes/index-list/the-odin-project.md)
@@ -23,4 +19,3 @@ If you prefer browsing the contents of this site through a list instead of a gra
 - [Full Stack Open](notes/index-list/fullstack-open.md)
 - [Miscellaneous](notes/index-list/miscellaneous.md)
 - [Quartz](notes/index-list/quartz.md)
-
