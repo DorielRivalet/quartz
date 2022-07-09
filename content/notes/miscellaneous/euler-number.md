@@ -17,7 +17,6 @@ tags:
 
 # Content
 Concept of growth
-
 $$e\approx1.00000001^{100000000}$$
 $$e:=\lim_{n\rightarrow\infty}(1+\frac1{n})^n$$
 $$e=\sum_{n=0}^\infty \frac1{n!}$$
