@@ -8,6 +8,8 @@ tags:
 - c
 - recursion
 - math
+- calculus
+- limits
 ---
 
 # Metadata
@@ -15,7 +17,11 @@ tags:
 
 # Content
 Concept of growth
-$$1.00000001^{100000000}\approx e=(1+\frac1{\infty})^\infty=\sum_{n=0}^\infty \frac1{n!}$$
+$$e\approx1.00000001^{100000000}$$
+$$e:=\lim_{n\rightarrow\infty}(1+\frac1{n})^n$$
+$$e=\sum_{n=0}^\infty \frac1{n!}$$
+$$\frac{d}{dx}e^x=e^x$$
+$$\int_1^t\frac{1}{x}dx=1$$
 ```c
 #include <stdio.h>
 
@@ -47,6 +53,13 @@ int main () {
 
 # Sources
 Own notes (with help of calculator and online c compiler)
+
+https://www.youtube.com/watch?v=sKtloBAuP74
+
+https://www.youtube.com/watch?v=pg827uDPFqA
+
+https://www.youtube.com/watch?v=rbmUqseGOOM
+
 
 # Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
